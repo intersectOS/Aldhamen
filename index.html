@@ -158,6 +158,22 @@
         }
         .space-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
+        /* TAM/SAM/SOM Circles */
+        .tsm-circle { background: rgba(255,255,255,0.02); }
+        .tsm-circle.tsm-active {
+            border-color: #8b5cf6 !important;
+            background: rgba(139, 92, 246, 0.12) !important;
+            box-shadow: 0 0 40px rgba(139,92,246,0.35), inset 0 0 30px rgba(139,92,246,0.1);
+        }
+        .tsm-circle.tsm-active span { color: #fff !important; }
+
+        /* Infra Gap Layers */
+        .infra-layer { transition: all 0.4s ease; }
+        #infraGapLayer.infra-solved {
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            background: linear-gradient(180deg, rgba(30,30,30,0.6) 0%, rgba(15,15,15,0.8) 100%);
+        }
+
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white">
@@ -323,6 +339,65 @@
             </div>
         </section>
 
+        <!-- SECTION 3.5: THE MISSING INFRASTRUCTURE LAYER -->
+        <section class="py-32 relative border-t border-white/5 bg-[#070707] overflow-hidden">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-6 text-sm font-bold uppercase tracking-wider text-gray-400" data-i18n="infraTag">لماذا هذا وليس تطبيق آخر</div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="infraTitle">السعودية رقمنت كل شيء.. إلا الأصول.</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed" data-i18n="infraSub">كل طبقة من الاقتصاد السعودي أصبحت رقمية ولها بنية تحتية وطنية موثوقة، ما عدا طبقة واحدة.</p>
+                </div>
+
+                <div id="infraStack" class="space-y-3 max-w-2xl mx-auto reveal stagger-1">
+                    <div class="infra-layer flex items-center justify-between glass-card rounded-2xl px-6 py-5 opacity-60">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10"><i data-lucide="users" class="w-5 h-5 text-gray-400"></i></div>
+                            <span class="font-bold text-lg text-gray-300" data-i18n="infraL1">الأفراد</span>
+                        </div>
+                        <span class="font-inter font-bold text-gray-500 tracking-wide">نفاذ · Nafath</span>
+                    </div>
+                    <div class="infra-layer flex items-center justify-between glass-card rounded-2xl px-6 py-5 opacity-60">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10"><i data-lucide="banknote" class="w-5 h-5 text-gray-400"></i></div>
+                            <span class="font-bold text-lg text-gray-300" data-i18n="infraL2">الأموال</span>
+                        </div>
+                        <span class="font-inter font-bold text-gray-500 tracking-wide">مدى · Mada</span>
+                    </div>
+                    <div class="infra-layer flex items-center justify-between glass-card rounded-2xl px-6 py-5 opacity-60">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10"><i data-lucide="landmark" class="w-5 h-5 text-gray-400"></i></div>
+                            <span class="font-bold text-lg text-gray-300" data-i18n="infraL3">الحكومة</span>
+                        </div>
+                        <span class="font-inter font-bold text-gray-500 tracking-wide">أبشر · Absher</span>
+                    </div>
+                    <div class="infra-layer flex items-center justify-between glass-card rounded-2xl px-6 py-5 opacity-60">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10"><i data-lucide="receipt" class="w-5 h-5 text-gray-400"></i></div>
+                            <span class="font-bold text-lg text-gray-300" data-i18n="infraL4">التجارة</span>
+                        </div>
+                        <span class="font-inter font-bold text-gray-500 tracking-wide" data-i18n="infraL4Sys">الفوترة الإلكترونية</span>
+                    </div>
+
+                    <div id="infraGapLayer" onclick="revealInfraGap()" class="infra-layer cursor-pointer flex items-center justify-between rounded-2xl px-6 py-6 border-2 border-dashed border-brand-500/50 bg-brand-500/5 transition-all duration-500 hover:bg-brand-500/10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-brand-500/20 flex items-center justify-center border border-brand-500/40 shadow-[0_0_15px_rgba(139,92,246,0.4)]"><i data-lucide="box" class="w-5 h-5 text-brand-300"></i></div>
+                            <span class="font-bold text-lg text-white" data-i18n="infraL5">الأصول</span>
+                        </div>
+                        <span id="infraGapLabel" class="font-inter font-bold text-brand-300 tracking-wide text-2xl animate-pulse">؟؟؟</span>
+                    </div>
+                </div>
+
+                <div id="infraReveal" class="max-w-2xl mx-auto mt-8 text-center opacity-0 max-h-0 overflow-hidden transition-all duration-700">
+                    <div class="glass-panel rounded-2xl p-8 border border-brand-500/30">
+                        <div class="text-3xl font-bold text-gradient mb-3" data-i18n="infraRevealTitle">الضامن هو الحلقة المفقودة</div>
+                        <p class="text-gray-300 text-lg leading-relaxed" data-i18n="infraRevealDesc">طبقة ثقة رقمية تمنح كل أصل مادي هوية رقمية دائمة، تماماً كما فعلت نفاذ للأفراد ومدى للأموال.</p>
+                    </div>
+                </div>
+
+                <p class="text-center text-gray-500 mt-6 text-sm" data-i18n="infraHint">اضغط على "الأصول" لترى من يملأ الفراغ</p>
+            </div>
+        </section>
+
         <!-- SECTION 4: INTERACTIVE JOURNEY -->
         <section class="py-32 relative border-t border-white/5">
             <div class="max-w-5xl mx-auto px-6">
@@ -475,7 +550,56 @@
                     <div class="reveal stagger-4">
                         <div class="text-5xl md:text-6xl font-bold text-white mb-2 counter text-glow" data-target="16">0</div>
                         <div class="text-brand-400 font-bold mb-4 text-xl">%</div>
-                        <p class="text-gray-400" data-i18n="stat1Label">نمو الاقتصاد الرقمي</p>
+                        <p class="text-gray-400" data-i18n="stat1Label">مساهمة الاقتصاد الرقمي بالناتج المحلي</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7.5: TAM / SAM / SOM -->
+        <section class="py-32 relative border-t border-white/5 bg-[#070707] overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 mb-6 text-brand-300 text-sm font-bold uppercase tracking-wider" data-i18n="tsTag">حجم الفرصة</div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="tsTitle">من مليارين إلى مئة مليون فرصة</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light" data-i18n="tsSub">اضغط على أي دائرة لاستكشاف حجم السوق في كل مرحلة.</p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-16 reveal stagger-1">
+                    <!-- Concentric Circles -->
+                    <div class="relative w-full lg:w-1/2 flex items-center justify-center" style="min-height: 420px;">
+                        <div id="circleTAM" onclick="selectTsm('TAM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-start justify-center pt-6 cursor-pointer transition-all duration-500" style="width: 420px; height: 420px;">
+                            <span class="font-inter font-bold text-gray-400 text-sm tracking-widest">TAM</span>
+                        </div>
+                        <div id="circleSAM" onclick="selectTsm('SAM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-start justify-center pt-6 cursor-pointer transition-all duration-500" style="width: 290px; height: 290px;">
+                            <span class="font-inter font-bold text-gray-400 text-sm tracking-widest">SAM</span>
+                        </div>
+                        <div id="circleSOM" onclick="selectTsm('SOM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-center justify-center cursor-pointer transition-all duration-500 bg-brand-500/10" style="width: 160px; height: 160px;">
+                            <span class="font-inter font-bold text-white text-sm tracking-widest">SOM</span>
+                        </div>
+                    </div>
+
+                    <!-- Detail Panel -->
+                    <div class="w-full lg:w-1/2">
+                        <div id="tsmPanel" class="glass-panel rounded-[2rem] p-10 border border-brand-500/20 transition-all duration-300">
+                            <div id="tsmName" class="text-brand-400 font-bold text-sm uppercase tracking-widest mb-2 font-inter">Total Addressable Market</div>
+                            <div id="tsmDesc" class="text-2xl font-bold text-white mb-8" data-i18n="tamLabel">كل أصل مادي ذو قيمة في السعودية</div>
+
+                            <div class="space-y-5">
+                                <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                                    <span class="text-gray-400" data-i18n="tsmAssetsLabel">عدد الأصول المستهدفة</span>
+                                    <span id="tsmAssets" class="text-2xl font-bold text-white font-inter">100M</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                                    <span class="text-gray-400" data-i18n="tsmArpaLabel">متوسط الإيراد السنوي للأصل</span>
+                                    <span id="tsmArpa" class="text-2xl font-bold text-white font-inter">20 SAR</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-400" data-i18n="tsmRevLabel">الإيراد السنوي المُقدّر</span>
+                                    <span id="tsmRev" class="text-3xl font-bold text-brand-400 font-inter text-glow">2.0B SAR</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -567,6 +691,15 @@
                 solF3T: "رهن وتمويل الأصول", solF3D: "استخدم منتجاتك الموثقة كضمان للحصول على تسهيلات تمويلية ومالية مرنة.",
                 cardItem: "سيارة عائلية", cardId: "المتجر: الوكيل المعتمد | ID: ALD-847", cardVal: "التمويل المتاح مقابل الأصل", cardWar: "صلاحية الضمان", financeReady: "مؤهل للرهن",
                 
+                infraTag: "لماذا هذا وليس تطبيق آخر", infraTitle: "السعودية رقمنت كل شيء.. إلا الأصول.", infraSub: "كل طبقة من الاقتصاد السعودي أصبحت رقمية ولها بنية تحتية وطنية موثوقة، ما عدا طبقة واحدة.",
+                infraL1: "الأفراد", infraL2: "الأموال", infraL3: "الحكومة", infraL4: "التجارة", infraL4Sys: "الفوترة الإلكترونية", infraL5: "الأصول",
+                infraRevealTitle: "الضامن هو الحلقة المفقودة", infraRevealDesc: "طبقة ثقة رقمية تمنح كل أصل مادي هوية رقمية دائمة، تماماً كما فعلت نفاذ للأفراد ومدى للأموال.",
+                infraHint: "اضغط على \"الأصول\" لترى من يملأ الفراغ",
+
+                tsTag: "حجم الفرصة", tsTitle: "من مليارين إلى مئة مليون فرصة", tsSub: "اضغط على أي دائرة لاستكشاف حجم السوق في كل مرحلة.",
+                tamLabel: "كل أصل مادي ذو قيمة في السعودية", samLabel: "الأصول الاستهلاكية والمؤسسية عالية القيمة (مركبات، جوالات، حواسيب، أجهزة منزلية)", somLabel: "هدف الضامن التجاري خلال أول 5 سنوات",
+                tsmAssetsLabel: "عدد الأصول المستهدفة", tsmArpaLabel: "متوسط الإيراد السنوي للأصل", tsmRevLabel: "الإيراد السنوي المُقدّر",
+
                 journeyTitle: "رحلة العميل: مقارنة التجربة", jOld: "الوضع الراهن", jNew: "مع الضامن",
                 jo1T: "شراء مشتت", jo1D: "متاجر مختلفة وفواتير ورقية أو واتساب.", jo2T: "ضياع وتلف", jo2D: "المحادثة تُحذف، الورق يضيع، والضمان يُنسى.", jo3T: "خسارة القيمة", jo3D: "أصل خامل لا يمكن تمويله أو ضمانه.",
                 jn1T: "محفظة موحدة", jn1D: "جميع مشترياتك من كافة المتاجر في مكان واحد.", jn2T: "تنبيه واستبدال", jn2D: "إشعار قبل الانتهاء، واستبدال سلس مع المتجر.", jn3T: "سيولة وتمويل", jn3D: "الأصل يصبح مؤهلاً للرهن والتمويل الشخصي.",
@@ -591,6 +724,15 @@
                 companyName: "AlDhamn", heroTagline: "The Next Generation of Assets", heroTitle: "Transforming Products into <br/> <span class='text-gradient text-glow'>Digital Assets</span>", heroSub: "Building the Trust Layer for the physical economy. We verify, protect, and financialize warranted products in Saudi Arabia.", heroCta1: "View Investment", heroCta2: "Discover the Problem",
                 problemTitle: "Millions in Assets, Zero Liquidity.", problemSub: "Consumers buy thousands worth of products, but leaving the store, the record vanishes, turning them into idle assets.", prob1Title: "Lost & Damaged Invoices", prob1Desc: "Paper gets thrown away, WhatsApp chats get deleted. There is no reliable proof of ownership.", prob2Title: "Store Fragmentation", prob2Desc: "Customers buy from various stores and forget where they bought the fridge or the TV when a breakdown occurs.", prob3Title: "Idle Assets (No Financing)", prob3Desc: "Despite having real financial value, it's nearly impossible to use these products as collateral or get financing against them.",
                 solutionTag: "The Core Solution", solutionTitle: "From a simple invoice..<br/>To a Financial Asset.", solutionDesc: "AlDhamn consolidates purchases from all stores into one wallet. It verifies the invoice, tracks the warranty, and makes the asset eligible for financing.", solF1T: "Auto-Save & Verification", solF1D: "No more lost WhatsApp chats. Everything is securely stored in a unified ledger.", solF2T: "Sustainability & Trade-in", solF2D: "We track product lifespan and notify you to trade-in before the warranty expires.", solF3T: "Collateral & Financing", solF3D: "Use your verified products as collateral to obtain flexible financing facilities.", cardItem: "Family SUV", cardId: "Store: Authorized Dealer | ID: ALD-847", cardVal: "Available Financing Value", cardWar: "Warranty Status", financeReady: "Collateral Ready",
+                infraTag: "Why Infrastructure, Not Another App", infraTitle: "Saudi Arabia Digitized Everything.. Except Assets.", infraSub: "Every layer of the Saudi economy is now digital with trusted national infrastructure, except one.",
+                infraL1: "People", infraL2: "Money", infraL3: "Government", infraL4: "Commerce", infraL4Sys: "E-Invoicing", infraL5: "Assets",
+                infraRevealTitle: "AlDhamn Is the Missing Layer", infraRevealDesc: "A trusted digital layer giving every physical asset a persistent digital identity, just as Nafath did for people and Mada did for money.",
+                infraHint: "Click \"Assets\" to see who fills the gap",
+
+                tsTag: "Market Opportunity", tsTitle: "From SAR 2 Billion to 100 Million Assets", tsSub: "Click any circle to explore market size at each stage.",
+                tamLabel: "Every valuable physical asset in Saudi Arabia", samLabel: "High-value consumer & enterprise assets (vehicles, phones, laptops, appliances)", somLabel: "AlDhamn's realistic commercial target for the first 5 years",
+                tsmAssetsLabel: "Target Assets", tsmArpaLabel: "Average Annual Revenue per Asset", tsmRevLabel: "Estimated Annual Revenue",
+
                 journeyTitle: "Customer Journey: A Comparison", jOld: "Current State", jNew: "With AlDhamn", jo1T: "Scattered Buying", jo1D: "Different stores, paper or WhatsApp receipts.", jo2T: "Loss & Damage", jo2D: "Chats deleted, paper lost, warranty forgotten.", jo3T: "Loss of Value", jo3D: "An idle asset that cannot be financed or guaranteed.", jn1T: "Unified Wallet", jn1D: "All your purchases from all stores in one place.", jn2T: "Alerts & Trade-ins", jn2D: "Notified before expiry, seamless store trade-in.", jn3T: "Liquidity & Finance", jn3D: "The asset becomes eligible for collateral and personal finance.",
                 b2bTag: "B2B Retail Partnerships", merchTitle: "Turning Warranties into Recurring Sales", merchSub: "AlDhamn is a growth engine for retailers to guarantee customer return for upgrades and trade-ins.", mf1T: "Precision Targeting (Hot Leads)", mf1D: "Know exactly when a customer's warranty ends to offer timely upgrades.", mf2T: "Smart Trade-in", mf2D: "We buy the old device, you get the sale for the new one.", mf3T: "Seamless API Integration", mf3D: "No accounting system changes needed. Seamless automated invoice registration.",
                 
@@ -600,7 +742,7 @@
                 member3Name: "Sulaiman Al-Khatib", 
                 member4Name: "Mashari Al-Jameel", 
 
-                marketTitle: "A Massive Market Opportunity", stat1Label: "Digital Economy Growth", stat2Label: "Retail Revenue", stat3Label: "Mada Payments", stat4Label: "Imported Assets", billionSar: "Billion SAR",
+                marketTitle: "A Massive Market Opportunity", stat1Label: "Digital Economy Contribution to GDP", stat2Label: "Retail Revenue", stat3Label: "Mada Payments", stat4Label: "Imported Assets", billionSar: "Billion SAR",
                 askTitle: "Investment Round", askRound: "Seed Round", askSub: "Join us in building the infrastructure of the physical market, and unlocking billions in idle assets.", askAmount: "$1.5M", 
                 contactEmail: "invest@aldhamn.sa", contactPhone: "050 147 3111"
             }
@@ -672,6 +814,8 @@
             initCounters();
             updateJourneyUI();
             renderFloatingLogos();
+            const activeTsm = document.querySelector('.tsm-circle.tsm-active');
+            selectTsm(activeTsm ? activeTsm.id.replace('circle','') : 'TAM');
         }
 
         document.getElementById('langToggle').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; renderContent(); });
@@ -716,6 +860,34 @@
             });
             wrapper.addEventListener('mouseleave', () => el.style.transform = `rotateX(0) rotateY(0) scale3d(1,1,1)`);
         });
+
+        function revealInfraGap() {
+            const label = document.getElementById('infraGapLabel');
+            const layer = document.getElementById('infraGapLayer');
+            const reveal = document.getElementById('infraReveal');
+            label.classList.remove('animate-pulse');
+            label.innerText = 'AlDhamn · الضامن';
+            layer.classList.add('infra-solved');
+            reveal.style.opacity = '1';
+            reveal.style.maxHeight = '400px';
+        }
+
+        const tsmData = {
+            TAM: { name: 'Total Addressable Market', descKey: 'tamLabel', assets: '100M', arpa: '20 SAR', rev: '2.0B SAR' },
+            SAM: { name: 'Serviceable Addressable Market', descKey: 'samLabel', assets: '25M', arpa: '20 SAR', rev: '500M SAR' },
+            SOM: { name: 'Serviceable Obtainable Market (5Y)', descKey: 'somLabel', assets: '5M', arpa: '20 SAR', rev: '100M SAR ARR' }
+        };
+        function selectTsm(key) {
+            ['TAM','SAM','SOM'].forEach(k => document.getElementById('circle'+k).classList.remove('tsm-active'));
+            document.getElementById('circle'+key).classList.add('tsm-active');
+            const d = tsmData[key];
+            const dText = state.data[state.lang][d.descKey] || d.descKey;
+            document.getElementById('tsmName').innerText = d.name;
+            document.getElementById('tsmDesc').innerText = dText;
+            document.getElementById('tsmAssets').innerText = d.assets;
+            document.getElementById('tsmArpa').innerText = d.arpa;
+            document.getElementById('tsmRev').innerText = d.rev;
+        }
 
         function toggleJourneyUI(el) {
             state.isNewJourney = !state.isNewJourney;
