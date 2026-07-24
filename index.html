@@ -400,6 +400,89 @@
             </div>
         </section>
 
+        <!-- SECTION 3.6: NATIONAL DEVICE OWNERSHIP REGISTRY -->
+        <section id="registry" class="py-32 relative border-t border-white/5 bg-gradient-to-b from-[#070707] to-brand-950/10 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/10 mb-6 text-amber-300 text-sm font-bold uppercase tracking-wider" data-i18n="regTag">الفرصة الكبرى</div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" data-i18n="regTitle">السيارة لها سجل ملكية.. والجوال ما له.</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed" data-i18n="regSub">تقدر تعرف كم مالك مرّ على أي سيارة قبل ما تشتريها. أما الجوال — بآلاف الريالات — فتشتريه وأنت ما تدري: مسروق؟ مستورد نظامي؟ كم واحد ملكه قبلك؟</p>
+                </div>
+
+                <!-- Side by side comparison -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div class="glass-card p-8 rounded-[2rem] reveal stagger-1 border border-green-500/20">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-green-500/15 border border-green-500/30 flex items-center justify-center"><i data-lucide="car" class="w-7 h-7 text-green-400"></i></div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white" data-i18n="regCarT">المركبات</h3>
+                                <p class="text-green-400 text-sm font-bold" data-i18n="regCarState">سجل وطني مكتمل</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 shrink-0 mt-1"></i><span data-i18n="regCar1">رقم هيكل فريد لكل مركبة (VIN)</span></li>
+                            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 shrink-0 mt-1"></i><span data-i18n="regCar2">عدد الملاك السابقين وتواريخ نقل الملكية</span></li>
+                            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 shrink-0 mt-1"></i><span data-i18n="regCar3">سجل الحوادث والصيانة عبر "موجز"</span></li>
+                            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 shrink-0 mt-1"></i><span data-i18n="regCar4">نقل ملكية موثّق عبر أبشر</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-[2rem] reveal stagger-2 border border-red-500/20">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-red-500/15 border border-red-500/30 flex items-center justify-center"><i data-lucide="smartphone" class="w-7 h-7 text-red-400"></i></div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white" data-i18n="regDevT">الأجهزة والجوالات</h3>
+                                <p class="text-red-400 text-sm font-bold" data-i18n="regDevState">لا يوجد سجل موحد</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex gap-3"><i data-lucide="x" class="w-5 h-5 text-red-400 shrink-0 mt-1"></i><span data-i18n="regDev1">رقم IMEI فريد موجود.. لكن غير مربوط بمالك</span></li>
+                            <li class="flex gap-3"><i data-lucide="x" class="w-5 h-5 text-red-400 shrink-0 mt-1"></i><span data-i18n="regDev2">ما تقدر تتحقق أن الجهاز غير مسروق قبل الشراء</span></li>
+                            <li class="flex gap-3"><i data-lucide="x" class="w-5 h-5 text-red-400 shrink-0 mt-1"></i><span data-i18n="regDev3">الإبلاغ عن السرقة يوقف الجهاز على شبكة مشغّل واحد فقط</span></li>
+                            <li class="flex gap-3"><i data-lucide="x" class="w-5 h-5 text-red-400 shrink-0 mt-1"></i><span data-i18n="regDev4">لا سجل لنقل الملكية عند إعادة البيع</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Precedent + opportunity -->
+                <div class="glass-panel rounded-[2rem] p-8 md:p-12 border border-brand-500/25 reveal stagger-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-brand-400 font-bold text-sm uppercase tracking-widest mb-3" data-i18n="regPrecT">سابقة عالمية</div>
+                            <p class="text-gray-300 leading-relaxed" data-i18n="regPrecD">الهند أنشأت سجلاً وطنياً موحداً لهويات الأجهزة (CEIR)، وألزمت الإفصاح عن رقم IMEI قبل البيع. الجهاز المسروق يُحظر على كل الشبكات خلال 24 ساعة — فتنهار قيمته وينتفي الدافع للسرقة.</p>
+                        </div>
+                        <div>
+                            <div class="text-brand-400 font-bold text-sm uppercase tracking-widest mb-3" data-i18n="regRoleT">دور الضامن</div>
+                            <p class="text-gray-300 leading-relaxed" data-i18n="regRoleD">نبني طبقة سجل الملكية للأجهزة: كل جهاز يُسجّل بفاتورته وIMEI باسم مالكه، ويُنقل السجل رسمياً عند البيع — بالتكامل مع الجهات المختصة ومشغّلي الاتصالات والمتاجر.</p>
+                        </div>
+                        <div>
+                            <div class="text-brand-400 font-bold text-sm uppercase tracking-widest mb-3" data-i18n="regWhyT">لماذا يهم</div>
+                            <p class="text-gray-300 leading-relaxed" data-i18n="regWhyD">سوق الأجهزة المستعملة اليوم قائم على الثقة الشخصية. سجل موثّق يرفع سعر إعادة البيع، يقطع سوق المسروقات، ويعطي الجهات الأمنية والتجارية مرجعاً واحداً.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-white mb-1">18M</div>
+                            <p class="text-gray-500 text-sm" data-i18n="regStat1">جوال يُباع سنوياً بلا سجل ملكية</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white mb-1">3</div>
+                            <p class="text-gray-500 text-sm" data-i18n="regStat2">مشغّلين، كل واحد يحظر على شبكته فقط</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white mb-1">0</div>
+                            <p class="text-gray-500 text-sm" data-i18n="regStat3">سجل وطني موحّد لملكية الأجهزة</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-brand-400 mb-1">1</div>
+                            <p class="text-gray-500 text-sm" data-i18n="regStat4">فرصة لبناء هذه الطبقة أولاً</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SECTION 4: INTERACTIVE JOURNEY -->
         <section class="py-32 relative border-t border-white/5">
             <div class="max-w-5xl mx-auto px-6">
@@ -566,9 +649,9 @@
                         <p class="text-gray-400" data-i18n="stat2Label">جوالات تُباع في السعودية سنوياً</p>
                     </div>
                     <div class="reveal stagger-3">
-                        <div class="text-5xl md:text-6xl font-bold text-white mb-2 counter text-glow" data-target="109">0</div>
+                        <div class="text-5xl md:text-6xl font-bold text-white mb-2 counter text-glow" data-target="404">0</div>
                         <div class="text-brand-400 font-bold mb-4 text-xl" data-i18n="billionSar">مليار ريال</div>
-                        <p class="text-gray-400" data-i18n="stat3Label">مبيعات التجزئة عبر نقاط البيع</p>
+                        <p class="text-gray-400" data-i18n="stat3Label">قيمة الأجهزة والمركبات المستوردة سنوياً</p>
                     </div>
                     <div class="reveal stagger-4">
                         <div class="text-5xl md:text-6xl font-bold text-white mb-2 counter text-glow" data-target="20">0</div>
@@ -581,89 +664,151 @@
             </div>
         </section>
 
-        <!-- SECTION 7.2: REVENUE MODEL -->
+        <!-- SECTION 7.2: REVENUE MODEL (B2C / B2B) -->
         <section id="revenue" class="py-32 relative border-t border-white/5 bg-[#070707] overflow-hidden">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/30 bg-green-500/10 mb-6 text-green-300 text-sm font-bold uppercase tracking-wider" data-i18n="revTag">نموذج الإيرادات</div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="revTitle">من أين يأتي الدخل؟</h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed" data-i18n="revSub">لا نعتمد على مصدر واحد. كل أصل مسجّل يدرّ في المتوسط 20 ريالاً سنوياً، موزّعة على خمس قنوات — إضافة إلى إيراد مؤسسي مستقل.</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="revTitle">مصدران للدخل، لا مصدر واحد</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed" data-i18n="revSub">الضامن يكسب من المستهلك ومن الشركات في آنٍ واحد: خدمات مدفوعة للعميل، وقيمة بيانات ووصول إعلاني للمصنّعين والمتاجر والجهات الحكومية.</p>
                 </div>
 
-                <!-- ARPA composition bar -->
-                <div class="glass-panel rounded-[2rem] p-8 md:p-10 border border-white/10 mb-10 reveal stagger-1">
-                    <div class="flex justify-between items-end mb-4">
-                        <span class="text-gray-400 text-sm" data-i18n="arpaLabel">متوسط الإيراد السنوي لكل أصل مسجّل</span>
-                        <span class="text-3xl font-bold text-white">20 <span class="text-lg text-gray-400" data-i18n="sarUnit">ريال</span></span>
-                    </div>
-                    <div class="flex w-full h-5 rounded-full overflow-hidden gap-1">
-                        <div class="bg-brand-500 shadow-[0_0_20px_rgba(139,92,246,0.5)]" style="width:55%"></div>
-                        <div class="bg-blue-500" style="width:15%"></div>
-                        <div class="bg-green-500" style="width:10%"></div>
-                        <div class="bg-amber-500" style="width:10%"></div>
-                        <div class="bg-pink-500" style="width:10%"></div>
-                    </div>
-                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-1 border-t-2 border-t-brand-500">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="shield-check" class="w-8 h-8 text-brand-400"></i>
-                            <span class="text-2xl font-bold text-brand-400">11 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                    <!-- ================= B2C ================= -->
+                    <div class="glass-panel rounded-[2rem] p-8 border border-brand-500/25 reveal stagger-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-brand-500/15 border border-brand-500/30 flex items-center justify-center"><i data-lucide="user" class="w-6 h-6 text-brand-400"></i></div>
+                                <div>
+                                    <div class="text-xs font-bold text-brand-400 tracking-widest font-inter">B2C</div>
+                                    <h3 class="text-2xl font-bold text-white" data-i18n="b2cTitle">من المستهلك</h3>
+                                </div>
+                            </div>
+                            <div class="text-left rtl:text-right">
+                                <div class="text-3xl font-bold text-white">20 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></div>
+                                <div class="text-gray-500 text-xs" data-i18n="perAssetYear">لكل أصل / سنوياً</div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev1T">عمولة التأمين المقسّط</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev1D">نسبة من قسط وثيقة الحماية التي يشتريها العميل عبر شركاء مرخّصين، ويسددها على دفعات شهرية.</p>
-                    </div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="b2cSub">خدمات يدفع مقابلها المستخدم مباشرة، تتراكم مع كل أصل يسجّله.</p>
 
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-2 border-t-2 border-t-blue-500">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="calendar-clock" class="w-8 h-8 text-blue-400"></i>
-                            <span class="text-2xl font-bold text-blue-400">3 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-brand-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev1T">عمولة التأمين المقسّط</h4>
+                                        <span class="text-brand-400 font-bold whitespace-nowrap">11 <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev1D">نسبة من قسط وثيقة الحماية التي يشتريها العميل عبر شركاء مرخّصين ويسددها شهرياً.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="calendar-clock" class="w-6 h-6 text-blue-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev2T">تمديد الضمان</h4>
+                                        <span class="text-blue-400 font-bold whitespace-nowrap">3 <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev2D">عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="crown" class="w-6 h-6 text-amber-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev3T">اشتراك العروض الحصرية</h4>
+                                        <span class="text-amber-400 font-bold whitespace-nowrap">3 <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev3D">اشتراك شهري يصل فيه العميل للعروض قبل إعلانها في المنصات الأخرى — أولوية وصول مدفوعة.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="repeat" class="w-6 h-6 text-green-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev4T">رسوم نقل الملكية</h4>
+                                        <span class="text-green-400 font-bold whitespace-nowrap">2 <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev4D">رسم عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع فيدفع الطرفان برضا.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="refresh-cw" class="w-6 h-6 text-pink-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev5T">عمولة الاستبدال</h4>
+                                        <span class="text-pink-400 font-bold whitespace-nowrap">1 <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev5D">نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev2T">تمديد الضمان</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev2D">عمولة على تمديد الضمان عند اقتراب انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.</p>
                     </div>
 
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-3 border-t-2 border-t-green-500">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="refresh-cw" class="w-8 h-8 text-green-400"></i>
-                            <span class="text-2xl font-bold text-green-400">2 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                    <!-- ================= B2B ================= -->
+                    <div class="glass-panel rounded-[2rem] p-8 border border-blue-500/25 reveal stagger-2">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center"><i data-lucide="building-2" class="w-6 h-6 text-blue-400"></i></div>
+                                <div>
+                                    <div class="text-xs font-bold text-blue-400 tracking-widest font-inter">B2B</div>
+                                    <h3 class="text-2xl font-bold text-white" data-i18n="b2bTitle">من الشركات والجهات</h3>
+                                </div>
+                            </div>
+                            <div class="text-left rtl:text-right">
+                                <div class="text-3xl font-bold text-white" data-i18n="b2bScale">يتضاعف</div>
+                                <div class="text-gray-500 text-xs" data-i18n="b2bScaleSub">مع حجم قاعدة البيانات</div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev3T">عمولة الاستبدال</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev3D">نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.</p>
-                    </div>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="b2bSub">كل أصل جديد يرفع قيمة المنصة للمعلنين والمصنّعين — إيراد لا يعتمد على دفع المستهلك.</p>
 
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-1 border-t-2 border-t-amber-500">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="repeat" class="w-8 h-8 text-amber-400"></i>
-                            <span class="text-2xl font-bold text-amber-400">2 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="megaphone" class="w-6 h-6 text-blue-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white mb-1" data-i18n="rev6T">إعلانات داخل المنصة (Pop-Up Ads)</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="rev6D">الشركات والمتاجر تدفع للضامن مقابل مساحات إعلانية داخل التطبيق، موجّهة حسب نوع الجهاز وعمره وقرب انتهاء ضمانه.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="factory" class="w-6 h-6 text-brand-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white mb-1" data-i18n="rev7T">بيع البيانات للمصنّعين</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="rev7D">اتجاهات الشراء، أعمار الأجهزة، معدلات الأعطال والاستبدال — بيانات تساعد المصنّع على تخطيط المنتج والضمان.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="truck" class="w-6 h-6 text-amber-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white mb-1" data-i18n="rev8T">سلاسل الإمداد وتجار التجزئة</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="rev8D">بيانات الطلب الحقيقي حسب المنطقة والفئة والموسم — تحسّن المخزون والتسعير وتوقيت العروض.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="landmark" class="w-6 h-6 text-green-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white mb-1" data-i18n="rev9T">الجهات الحكومية</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="rev9D">سجل ملكية الأجهزة ومؤشرات السوق تخدم الجهات التجارية والأمنية — من مكافحة المسروقات إلى مراقبة الاستيراد النظامي.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="code-2" class="w-6 h-6 text-pink-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <h4 class="font-bold text-white mb-1" data-i18n="rev10T">تكامل المتاجر (API)</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="rev10D">ربط بلا اشتراك شهري: المتجر يسجّل الفواتير تلقائياً، والضامن يكسب من الاستبدال والحماية.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev4T">رسوم نقل الملكية</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev4D">رسم بسيط عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع، فيدفع الطرفان برضا.</p>
                     </div>
-
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-2 border-t-2 border-t-pink-500">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="megaphone" class="w-8 h-8 text-pink-400"></i>
-                            <span class="text-2xl font-bold text-pink-400">2 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev5T">عروض مموّلة بموافقة العميل</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev5D">عروض من المتاجر تصل في التوقيت المناسب، ولا تُرسل إلا لمن وافق صراحةً على استقبالها.</p>
-                    </div>
-
-                    <div class="glass-card p-7 rounded-3xl reveal stagger-3 border-t-2 border-t-white/30">
-                        <div class="flex justify-between items-start mb-4">
-                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-gray-300"></i>
-                            <span class="text-sm font-bold text-gray-400 px-3 py-1 rounded-full border border-white/10" data-i18n="b2bBadge">إيراد مؤسسي</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="rev6T">رؤى سوقية مجمّعة</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="rev6D">تقارير اتجاهات مجمّعة ومجهّلة الهوية للمصنّعين وسلاسل التجزئة — بيانات فئات ومناطق، لا بيانات أفراد.</p>
-                    </div>
-                </div>
-
-                <div class="mt-10 glass-panel rounded-2xl p-6 border border-brand-500/20 flex items-start gap-4 reveal">
-                    <i data-lucide="lock" class="w-6 h-6 text-brand-400 shrink-0 mt-1"></i>
-                    <p class="text-gray-300 leading-relaxed" data-i18n="pdplNote"><span class="font-bold text-white">التزام بنظام حماية البيانات الشخصية:</span> لا نبيع بيانات شخصية. تُبنى الرؤية السوقية على بيانات مجمّعة ومجهّلة الهوية، والعروض التسويقية لا تُرسل إلا بموافقة صريحة — بما يتوافق مع متطلبات سدايا.</p>
                 </div>
             </div>
         </section>
@@ -847,18 +992,34 @@
                 member3Name: "سليمان الخطيب", 
                 member4Name: "مشاري الجميل", 
 
-                marketTitle: "سوق قائم وأرقام تسنده", stat1Label: "أقساط التأمين المكتتبة في المملكة", stat2Label: "جوالات تُباع في السعودية سنوياً", stat3Label: "مبيعات التجزئة عبر نقاط البيع", stat4Label: "من مشتري الأجهزة يضيفون وثيقة حماية عند الشراء", billionSar: "مليار ريال", millionUnit: "مليون جهاز",
+                marketTitle: "سوق قائم وأرقام تسنده", stat1Label: "أقساط التأمين المكتتبة في المملكة", stat2Label: "جوالات تُباع في السعودية سنوياً", stat3Label: "قيمة الأجهزة والمركبات المستوردة سنوياً", stat4Label: "من مشتري الأجهزة يضيفون وثيقة حماية عند الشراء", billionSar: "مليار ريال", millionUnit: "مليون جهاز",
                 statsSource: "المصادر: الهيئة العامة للإحصاء، البنك المركزي السعودي، هيئة التأمين، وتقارير سوق عالمية (Omdia / Euromonitor / Grand View). نسبة إضافة وثيقة الحماية معيار عالمي لقنوات البيع الإلكترونية.",
 
-                revTag: "نموذج الإيرادات", revTitle: "من أين يأتي الدخل؟", revSub: "لا نعتمد على مصدر واحد. كل أصل مسجّل يدرّ في المتوسط 20 ريالاً سنوياً، موزّعة على خمس قنوات — إضافة إلى إيراد مؤسسي مستقل.",
-                arpaLabel: "متوسط الإيراد السنوي لكل أصل مسجّل", sarUnit: "ريال", b2bBadge: "إيراد مؤسسي",
-                rev1T: "عمولة التأمين المقسّط", rev1D: "نسبة من قسط وثيقة الحماية التي يشتريها العميل عبر شركاء مرخّصين، ويسددها على دفعات شهرية.",
-                rev2T: "تمديد الضمان", rev2D: "عمولة على تمديد الضمان عند اقتراب انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
-                rev3T: "عمولة الاستبدال", rev3D: "نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.",
-                rev4T: "رسوم نقل الملكية", rev4D: "رسم بسيط عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع، فيدفع الطرفان برضا.",
-                rev5T: "عروض مموّلة بموافقة العميل", rev5D: "عروض من المتاجر تصل في التوقيت المناسب، ولا تُرسل إلا لمن وافق صراحةً على استقبالها.",
-                rev6T: "رؤى سوقية مجمّعة", rev6D: "تقارير اتجاهات مجمّعة ومجهّلة الهوية للمصنّعين وسلاسل التجزئة — بيانات فئات ومناطق، لا بيانات أفراد.",
-                pdplNote: "<span class=\'font-bold text-white\'>التزام بنظام حماية البيانات الشخصية:</span> لا نبيع بيانات شخصية. تُبنى الرؤية السوقية على بيانات مجمّعة ومجهّلة الهوية، والعروض التسويقية لا تُرسل إلا بموافقة صريحة — بما يتوافق مع متطلبات سدايا.",
+                revTag: "نموذج الإيرادات", revTitle: "مصدران للدخل، لا مصدر واحد", revSub: "الضامن يكسب من المستهلك ومن الشركات في آنٍ واحد: خدمات مدفوعة للعميل، وقيمة بيانات ووصول إعلاني للمصنّعين والمتاجر والجهات الحكومية.",
+                sarUnit: "ريال", perAssetYear: "لكل أصل / سنوياً",
+                b2cTitle: "من المستهلك", b2cSub: "خدمات يدفع مقابلها المستخدم مباشرة، تتراكم مع كل أصل يسجّله.",
+                b2bTitle: "من الشركات والجهات", b2bSub: "كل أصل جديد يرفع قيمة المنصة للمعلنين والمصنّعين — إيراد لا يعتمد على دفع المستهلك.", b2bScale: "يتضاعف", b2bScaleSub: "مع حجم قاعدة البيانات",
+                rev1T: "عمولة التأمين المقسّط", rev1D: "نسبة من قسط وثيقة الحماية التي يشتريها العميل عبر شركاء مرخّصين ويسددها شهرياً.",
+                rev2T: "تمديد الضمان", rev2D: "عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
+                rev3T: "اشتراك العروض الحصرية", rev3D: "اشتراك شهري يصل فيه العميل للعروض قبل إعلانها في المنصات الأخرى — أولوية وصول مدفوعة.",
+                rev4T: "رسوم نقل الملكية", rev4D: "رسم عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع فيدفع الطرفان برضا.",
+                rev5T: "عمولة الاستبدال", rev5D: "نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.",
+                rev6T: "إعلانات داخل المنصة (Pop-Up Ads)", rev6D: "الشركات والمتاجر تدفع للضامن مقابل مساحات إعلانية داخل التطبيق، موجّهة حسب نوع الجهاز وعمره وقرب انتهاء ضمانه.",
+                rev7T: "بيع البيانات للمصنّعين", rev7D: "اتجاهات الشراء، أعمار الأجهزة، معدلات الأعطال والاستبدال — بيانات تساعد المصنّع على تخطيط المنتج والضمان.",
+                rev8T: "سلاسل الإمداد وتجار التجزئة", rev8D: "بيانات الطلب الحقيقي حسب المنطقة والفئة والموسم — تحسّن المخزون والتسعير وتوقيت العروض.",
+                rev9T: "الجهات الحكومية", rev9D: "سجل ملكية الأجهزة ومؤشرات السوق تخدم الجهات التجارية والأمنية — من مكافحة المسروقات إلى مراقبة الاستيراد النظامي.",
+                rev10T: "تكامل المتاجر (API)", rev10D: "ربط بلا اشتراك شهري: المتجر يسجّل الفواتير تلقائياً، والضامن يكسب من الاستبدال والحماية.",
+
+                regTag: "الفرصة الكبرى", regTitle: "السيارة لها سجل ملكية.. والجوال ما له.", regSub: "تقدر تعرف كم مالك مرّ على أي سيارة قبل ما تشتريها. أما الجوال — بآلاف الريالات — فتشتريه وأنت ما تدري: مسروق؟ مستورد نظامي؟ كم واحد ملكه قبلك؟",
+                regCarT: "المركبات", regCarState: "سجل وطني مكتمل",
+                regCar1: "رقم هيكل فريد لكل مركبة (VIN)", regCar2: "عدد الملاك السابقين وتواريخ نقل الملكية", regCar3: "سجل الحوادث والصيانة عبر \'موجز\'", regCar4: "نقل ملكية موثّق عبر أبشر",
+                regDevT: "الأجهزة والجوالات", regDevState: "لا يوجد سجل موحد",
+                regDev1: "رقم IMEI فريد موجود.. لكن غير مربوط بمالك", regDev2: "ما تقدر تتحقق أن الجهاز غير مسروق قبل الشراء", regDev3: "الإبلاغ عن السرقة يوقف الجهاز على شبكة مشغّل واحد فقط", regDev4: "لا سجل لنقل الملكية عند إعادة البيع",
+                regPrecT: "سابقة عالمية", regPrecD: "الهند أنشأت سجلاً وطنياً موحداً لهويات الأجهزة (CEIR)، وألزمت الإفصاح عن رقم IMEI قبل البيع. الجهاز المسروق يُحظر على كل الشبكات خلال 24 ساعة — فتنهار قيمته وينتفي الدافع للسرقة.",
+                regRoleT: "دور الضامن", regRoleD: "نبني طبقة سجل الملكية للأجهزة: كل جهاز يُسجّل بفاتورته وIMEI باسم مالكه، ويُنقل السجل رسمياً عند البيع — بالتكامل مع الجهات المختصة ومشغّلي الاتصالات والمتاجر.",
+                regWhyT: "لماذا يهم", regWhyD: "سوق الأجهزة المستعملة اليوم قائم على الثقة الشخصية. سجل موثّق يرفع سعر إعادة البيع، يقطع سوق المسروقات، ويعطي الجهات الأمنية والتجارية مرجعاً واحداً.",
+                regStat1: "جوال يُباع سنوياً بلا سجل ملكية", regStat2: "مشغّلين، كل واحد يحظر على شبكته فقط", regStat3: "سجل وطني موحّد لملكية الأجهزة", regStat4: "فرصة لبناء هذه الطبقة أولاً",
+
                 valuationLabel: "التقييم بعد الجولة", valuationPre: "التقييم قبل الجولة", equityLabel: "الحصة المعروضة", useOfFunds: "أوجه استخدام التمويل",
                 
                 askTitle: "الجولة الاستثمارية", askRound: "الجولة التأسيسية", askSub: "100 مليون ريال مقابل 20% — لبناء منظومة توثيق الأصول وحمايتها في المملكة.", askAmount: "100 مليون ريال", 
@@ -891,18 +1052,34 @@
                 member3Name: "Sulaiman Al-Khatib", 
                 member4Name: "Mashari Al-Jameel", 
 
-                marketTitle: "A Real Market, Backed by Numbers", stat1Label: "Insurance premiums written in the Kingdom", stat2Label: "Mobile phones sold in Saudi Arabia yearly", stat3Label: "Retail sales through points of sale", stat4Label: "of device buyers add a protection plan at checkout", billionSar: "Billion SAR", millionUnit: "Million devices",
+                marketTitle: "A Real Market, Backed by Numbers", stat1Label: "Insurance premiums written in the Kingdom", stat2Label: "Mobile phones sold in Saudi Arabia yearly", stat3Label: "Value of devices and vehicles imported yearly", stat4Label: "of device buyers add a protection plan at checkout", billionSar: "Billion SAR", millionUnit: "Million devices",
                 statsSource: "Sources: GASTAT, Saudi Central Bank, Insurance Authority, and global market reports (Omdia / Euromonitor / Grand View). Protection-plan attach rate is a global benchmark for online retail channels.",
 
-                revTag: "Revenue Model", revTitle: "Where does the money come from?", revSub: "We do not rely on a single source. Each registered asset generates about SAR 20 a year across five channels — plus a separate enterprise revenue line.",
-                arpaLabel: "Average annual revenue per registered asset", sarUnit: "SAR", b2bBadge: "Enterprise",
+                revTag: "Revenue Model", revTitle: "Two revenue engines, not one", revSub: "AlDhamn earns from consumers and from businesses at the same time: paid services for the customer, plus data value and ad reach for manufacturers, retailers and government entities.",
+                sarUnit: "SAR", perAssetYear: "per asset / year",
+                b2cTitle: "From consumers", b2cSub: "Services the user pays for directly, compounding with every asset they register.",
+                b2bTitle: "From businesses & entities", b2bSub: "Every new asset raises platform value for advertisers and manufacturers — revenue that does not depend on consumer spend.", b2bScale: "Compounds", b2bScaleSub: "with database scale",
                 rev1T: "Instalment insurance commission", rev1D: "A share of the protection premium the customer buys through licensed partners and pays monthly.",
-                rev2T: "Warranty extension", rev2D: "Commission on extending a warranty as it nears expiry — the exact moment we already alert the customer.",
-                rev3T: "Trade-in commission", rev3D: "A share of the price difference when an old device is traded in through a partner store.",
-                rev4T: "Ownership transfer fee", rev4D: "A small fee to move a device record to its new owner — a verified record raises resale price, so both sides pay willingly.",
-                rev5T: "Sponsored offers, opt-in", rev5D: "Store offers that arrive at the right moment, sent only to customers who explicitly agreed to receive them.",
-                rev6T: "Aggregated market insights", rev6D: "Anonymised, aggregated trend reports for manufacturers and retail chains — category and region data, never individual data.",
-                pdplNote: "<span class=\'font-bold text-white\'>Personal Data Protection Law compliance:</span> We do not sell personal data. Market insight is built on aggregated, anonymised data, and marketing offers are sent only with explicit consent — in line with SDAIA requirements.",
+                rev2T: "Warranty extension", rev2D: "Commission on extending a warranty before it lapses — the exact moment we already alert the customer.",
+                rev3T: "Exclusive offers subscription", rev3D: "A monthly subscription giving the customer offers before they are announced on other platforms — paid early access.",
+                rev4T: "Ownership transfer fee", rev4D: "A fee to move a device record to its new owner — a verified record raises resale price, so both sides pay willingly.",
+                rev5T: "Trade-in commission", rev5D: "A share of the price difference when an old device is traded in through a partner store.",
+                rev6T: "In-app advertising (Pop-Up Ads)", rev6D: "Brands and retailers pay AlDhamn for ad placements inside the app, targeted by device type, age and warranty expiry.",
+                rev7T: "Data sales to manufacturers", rev7D: "Purchase trends, device lifespans, failure and replacement rates — data that helps manufacturers plan product and warranty.",
+                rev8T: "Supply chains & retailers", rev8D: "Real demand data by region, category and season — improving inventory, pricing and offer timing.",
+                rev9T: "Government entities", rev9D: "Device ownership records and market indicators serving commercial and security bodies — from tackling stolen goods to monitoring lawful imports.",
+                rev10T: "Merchant integration (API)", rev10D: "No monthly subscription: the store registers invoices automatically, and AlDhamn earns from trade-ins and protection.",
+
+                regTag: "The Bigger Opportunity", regTitle: "A car has an ownership record. A phone does not.", regSub: "You can check how many owners a car had before you buy it. A phone — worth thousands — you buy blind: stolen? lawfully imported? how many owners before you?",
+                regCarT: "Vehicles", regCarState: "Complete national record",
+                regCar1: "A unique chassis number per vehicle (VIN)", regCar2: "Previous owner count and transfer dates", regCar3: "Accident and service history via Mojaz", regCar4: "Verified ownership transfer through Absher",
+                regDevT: "Devices & phones", regDevState: "No unified record",
+                regDev1: "A unique IMEI exists.. but is not tied to an owner", regDev2: "You cannot verify a device is not stolen before buying", regDev3: "Reporting theft blocks the device on one operator network only", regDev4: "No record of ownership transfer on resale",
+                regPrecT: "Global precedent", regPrecD: "India built a unified national device identity register (CEIR) and mandated IMEI disclosure before sale. A stolen device is blocked across every network within 24 hours — its value collapses and the incentive to steal disappears.",
+                regRoleT: "AlDhamn's role", regRoleD: "We build the ownership record layer for devices: each device registered with its invoice and IMEI under its owner, with the record formally transferred on sale — integrated with authorities, telecom operators and retailers.",
+                regWhyT: "Why it matters", regWhyD: "The used-device market runs on personal trust today. A verified record raises resale prices, cuts off the stolen-goods market, and gives commercial and security bodies a single reference.",
+                regStat1: "phones sold yearly with no ownership record", regStat2: "operators, each blocking only on its own network", regStat3: "unified national device ownership registry", regStat4: "opportunity to build this layer first",
+
                 valuationLabel: "Post-money valuation", valuationPre: "Pre-money valuation", equityLabel: "Equity offered", useOfFunds: "Use of funds",
                 askTitle: "Investment Round", askRound: "Founding Round", askSub: "SAR 100 million for 20% — to build the Kingdom's asset documentation and protection ecosystem.", askAmount: "SAR 100M", 
                 contactEmail: "invest@aldhamn.sa", contactPhone: "050 147 3111"
