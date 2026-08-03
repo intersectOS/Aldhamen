@@ -161,14 +161,49 @@
         .space-logo:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(139,92,246,0.25); }
         .space-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        /* TAM/SAM/SOM Circles */
-        .tsm-circle { background: rgba(255,255,255,0.02); }
-        .tsm-circle.tsm-active {
+        /* ===== Market Journey ===== */
+        .jr-rail-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:18px 16px;backdrop-filter:blur(12px)}
+        .jr-rail-item{display:flex;align-items:flex-start;gap:10px;padding:7px 0;cursor:pointer;position:relative}
+        .jr-rail-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.18);margin-top:5px;flex-shrink:0;transition:all .35s;position:relative;z-index:2}
+        .jr-rail-item:not(:last-child)::before{content:'';position:absolute;right:4px;top:18px;bottom:-4px;width:1px;background:rgba(255,255,255,0.09)}
+        html[dir=ltr] .jr-rail-item:not(:last-child)::before{right:auto;left:4px}
+        .jr-rail-label{font-size:12.5px;color:#6b7280;transition:color .3s;line-height:1.35}
+        .jr-rail-val{font-size:11px;color:#4b5563;font-family:Inter,sans-serif;margin-top:1px}
+        .jr-rail-item.on .jr-rail-dot{background:#8b5cf6;box-shadow:0 0 0 4px rgba(139,92,246,0.18),0 0 14px rgba(139,92,246,0.8)}
+        .jr-rail-item.on .jr-rail-label{color:#fff;font-weight:700}
+        .jr-rail-item.on .jr-rail-val{color:#a78bfa}
+        .jr-rail-item:hover .jr-rail-label{color:#d1d5db}
+
+        .jr-stage{position:relative;padding-bottom:34px}
+        .jr-stage:not(:last-child)::after{content:'';position:absolute;right:50%;bottom:0;height:34px;width:2px;background:linear-gradient(to bottom,rgba(139,92,246,0.55),rgba(139,92,246,0.05));transform:translateX(50%)}
+        .jr-card{background:linear-gradient(145deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.09);border-radius:24px;padding:24px 26px;backdrop-filter:blur(16px);transition:border-color .4s,box-shadow .4s,transform .4s}
+        .jr-card:hover{border-color:rgba(139,92,246,0.4);box-shadow:0 0 40px -12px rgba(139,92,246,0.45);transform:translateY(-2px)}
+        .jr-card.on{border-color:rgba(139,92,246,0.5);box-shadow:0 0 50px -14px rgba(139,92,246,0.5)}
+        .jr-idx{width:34px;height:34px;border-radius:11px;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.3);display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif;font-weight:800;font-size:13px;color:#a78bfa;flex-shrink:0}
+        .jr-val{font-family:Inter,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1}
+        .jr-formula{font-family:Inter,sans-serif;font-size:11.5px;color:#6b7280;background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.06);border-radius:9px;padding:7px 11px;display:inline-block;direction:ltr}
+        .jr-btn{width:26px;height:26px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#9ca3af;font-size:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+        .jr-btn:hover{background:rgba(139,92,246,0.2);color:#fff;border-color:rgba(139,92,246,0.45)}
+        .jr-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1),opacity .4s;opacity:0}
+        .jr-body.open{max-height:1400px;opacity:1;margin-top:18px}
+        .jr-note{background:rgba(139,92,246,0.07);border:1px solid rgba(139,92,246,0.18);border-radius:14px;padding:14px 16px;font-size:13.5px;color:#c4b5fd;line-height:1.75}
+        .jr-metric{background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.06);border-radius:13px;padding:12px 14px}
+        .jr-metric-lbl{font-size:11px;color:#6b7280;margin-bottom:5px}
+        .jr-metric-val{font-family:Inter,sans-serif;font-weight:700;font-size:16px;color:#fff}
+        .jr-in{width:100%;background:#0d0d12;border:1px solid rgba(255,255,255,0.12);border-radius:9px;padding:7px 10px;color:#fff;font-family:Inter,sans-serif;font-size:13px;text-align:center;direction:ltr}
+        .jr-in:focus{outline:none;border-color:#8b5cf6;box-shadow:0 0 0 3px rgba(139,92,246,0.15)}
+        .jr-yr{font-size:10px;color:#6b7280;text-align:center;margin-bottom:4px;font-family:Inter,sans-serif}
+        .jr-scn{padding:9px 20px;border-radius:14px;font-size:13.5px;font-weight:700;color:#9ca3af;cursor:pointer;transition:all .3s;border:none;background:transparent}
+        .jr-scn.on{background:rgba(139,92,246,0.22);color:#fff;box-shadow:0 0 20px -6px rgba(139,92,246,0.6)}
+        .jr-chip{font-size:10.5px;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,0.06);color:#9ca3af;font-family:Inter,sans-serif}
+        .jr-split{background:rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:14px 16px}
+        .jr-bar{height:5px;border-radius:3px;background:rgba(255,255,255,0.07);overflow:hidden;margin-top:7px}
+        .jr-bar i{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,#8b5cf6,#22d3ee)}
+        @media(max-width:1023px){.jr-stage:not(:last-child)::after{right:24px;transform:none}html[dir=ltr] .jr-stage:not(:last-child)::after{right:auto;left:24px}}
             border-color: #8b5cf6 !important;
             background: rgba(139, 92, 246, 0.12) !important;
             box-shadow: 0 0 40px rgba(139,92,246,0.35), inset 0 0 30px rgba(139,92,246,0.1);
         }
-        .tsm-circle.tsm-active span { color: #fff !important; }
 
         /* Infra Gap Layers */
         .infra-layer { transition: all 0.4s ease; }
@@ -780,52 +815,35 @@
             </div>
         </section>
 
-        <!-- SECTION 7.5: TAM / SAM / SOM -->
-        <section class="py-32 relative border-t border-white/5 bg-[#070707] overflow-hidden">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 mb-6 text-brand-300 text-sm font-bold uppercase tracking-wider" data-i18n="tsTag">حجم الفرصة</div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="tsTitle">من مليارين إلى مئة مليون فرصة</h2>
-                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light" data-i18n="tsSub">اضغط على أي دائرة لاستكشاف حجم السوق في كل مرحلة.</p>
+        <!-- SECTION 7.5: MARKET JOURNEY (SAMA-based methodology) -->
+        <section id="journeySection" class="py-28 relative border-t border-white/5 bg-[#070707] overflow-hidden">
+            <div class="absolute inset-0 opacity-[0.35] pointer-events-none" style="background:radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.18), transparent 60%)"></div>
+            <div class="max-w-7xl mx-auto px-6 relative">
+                <div class="text-center mb-10 reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 mb-6 text-brand-300 text-sm font-bold uppercase tracking-wider" id="jrTag">منهجية الفرصة</div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" id="jrTitle">من نشاط السوق الفعلي إلى نقطة التعادل</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light" id="jrSub">لا نقدّر السوق بنسب افتراضية. نبدأ من بيانات نقاط البيع الرسمية (ساما)، ثم نصفّيها بمصفوفة المنتجات المؤهلة، وننزل مرحلة بمرحلة حتى الربح التشغيلي.</p>
                 </div>
 
-                <div class="flex flex-col lg:flex-row items-center gap-16 reveal stagger-1">
-                    <!-- Concentric Circles -->
-                    <div class="relative w-full lg:w-1/2 flex items-center justify-center" style="min-height: 420px;">
-                        <div id="circleTAM" onclick="selectTsm('TAM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-start justify-center pt-6 cursor-pointer transition-all duration-500" style="width: 420px; height: 420px;">
-                            <span class="font-inter font-bold text-gray-400 text-sm tracking-widest">TAM</span>
-                        </div>
-                        <div id="circleSAM" onclick="selectTsm('SAM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-start justify-center pt-6 cursor-pointer transition-all duration-500" style="width: 290px; height: 290px;">
-                            <span class="font-inter font-bold text-gray-400 text-sm tracking-widest">SAM</span>
-                        </div>
-                        <div id="circleSOM" onclick="selectTsm('SOM')" class="tsm-circle absolute rounded-full border-2 border-white/10 flex items-center justify-center cursor-pointer transition-all duration-500 bg-brand-500/10" style="width: 160px; height: 160px;">
-                            <span class="font-inter font-bold text-white text-sm tracking-widest">SOM</span>
-                        </div>
-                    </div>
-
-                    <!-- Detail Panel -->
-                    <div class="w-full lg:w-1/2">
-                        <div id="tsmPanel" class="glass-panel rounded-[2rem] p-10 border border-brand-500/20 transition-all duration-300">
-                            <div id="tsmName" class="text-brand-400 font-bold text-sm uppercase tracking-widest mb-2 font-inter">Total Addressable Market</div>
-                            <div id="tsmDesc" class="text-2xl font-bold text-white mb-8" data-i18n="tamLabel">كل أصل مادي ذو قيمة في السعودية</div>
-
-                            <div class="space-y-5">
-                                <div class="flex justify-between items-center border-b border-white/10 pb-4">
-                                    <span class="text-gray-400" data-i18n="tsmAssetsLabel">عدد الأصول المستهدفة</span>
-                                    <span id="tsmAssets" class="text-2xl font-bold text-white font-inter">100M</span>
-                                </div>
-                                <div class="flex justify-between items-center border-b border-white/10 pb-4">
-                                    <span class="text-gray-400" data-i18n="tsmArpaLabel">متوسط الإيراد السنوي للأصل</span>
-                                    <span id="tsmArpa" class="text-2xl font-bold text-white font-inter">20 SAR</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-400" data-i18n="tsmRevLabel">الإيراد السنوي المُقدّر</span>
-                                    <span id="tsmRev" class="text-3xl font-bold text-brand-400 font-inter text-glow">2.0B SAR</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Scenario switcher -->
+                <div class="flex justify-center mb-10 reveal">
+                    <div class="inline-flex p-1 rounded-2xl bg-white/[0.04] border border-white/10 gap-1" id="jrScenarios"></div>
                 </div>
+
+                <div class="flex gap-10 items-start">
+                    <!-- Sticky journey rail -->
+                    <aside class="hidden lg:block w-64 shrink-0 sticky top-24">
+                        <div class="jr-rail-box">
+                            <div class="text-[11px] font-bold text-gray-500 tracking-widest uppercase mb-4 font-inter">رحلة التحويل</div>
+                            <div id="jrRail"></div>
+                        </div>
+                    </aside>
+
+                    <!-- Stage cards -->
+                    <div class="flex-1 min-w-0" id="jrStages"></div>
+                </div>
+
+                <p class="text-gray-600 text-xs mt-12 max-w-4xl mx-auto leading-relaxed text-center reveal" id="jrSource">المصدر الأساسي: بيانات نقاط البيع المنشورة من البنك المركزي السعودي (ساما) وDataSaudi. نسب الوصول والتسجيل والتفعيل افتراضات إدارية قابلة للتعديل أعلاه، وليست أرقاماً رسمية.</p>
             </div>
         </section>
 
@@ -849,8 +867,8 @@
                 </div>
             </div>
             <!-- Huge Background Logo -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none z-0">
-                <span class="text-[40rem] font-bold">ض</span>
+            <div class="absolute inset-0 flex items-center justify-center opacity-5 z-0">
+                <span id="adminTrigger" class="text-[40rem] font-bold cursor-default select-none" style="pointer-events:auto">ض</span>
             </div>
         </section>
 
@@ -861,7 +879,6 @@
                 <span data-i18n="finBtn">النموذج المالي التفاعلي</span>
             </button>
             <p class="font-inter">© <span id="currentYear"></span> AlDhamn. All rights reserved.</p>
-            <div id="adminTrigger" class="absolute bottom-0 right-0 w-20 h-20 cursor-default"></div>
         </footer>
 
         <!-- Financial Model password gate -->
@@ -951,10 +968,6 @@
                 infraRevealTitle: "الضامن يساهم في استكمال المنظومة", infraRevealDesc: "طبقة ثقة تمنح كل أصل مادي سجلاً رقمياً موثّقاً — امتداداً لما قدّمته نفاذ للأفراد ومدى للمدفوعات.",
                 infraHint: "اضغط على \"الأصول\" لترى دورنا",
 
-                tsTag: "حجم الفرصة", tsTitle: "من مليارين إلى مئة مليون فرصة", tsSub: "اضغط على أي دائرة لاستكشاف حجم السوق في كل مرحلة.",
-                tamLabel: "كل أصل مادي ذو قيمة في السعودية", samLabel: "الأصول الاستهلاكية والمؤسسية عالية القيمة (مركبات، جوالات، حواسيب، أجهزة منزلية)", somLabel: "هدف الضامن التجاري خلال أول 5 سنوات",
-                tsmAssetsLabel: "عدد الأصول المستهدفة", tsmArpaLabel: "متوسط الإيراد السنوي للأصل", tsmRevLabel: "الإيراد السنوي المُقدّر",
-
                 qcTag: "بلمحة سريعة",
                 qc1Old: "1000 فاتورة ورقية = خسائر دائمة", qc1New: "سجل رقمي واحد لا يضيع أبداً",
                 qc2Old: "الضمان ينتهي دون أن تشعر", qc2New: "تنبيه ذكي قبل 6 أشهر من الانتهاء",
@@ -1012,10 +1025,6 @@
                 infraL1: "People", infraL2: "Money", infraL3: "Government", infraL4: "Commerce", infraL4Sys: "E-Invoicing", infraL5: "Assets",
                 infraRevealTitle: "AlDhamn Helps Complete the Ecosystem", infraRevealDesc: "A trust layer giving every physical asset a verified digital record — extending what Nafath did for people and Mada did for payments.",
                 infraHint: "Click \"Assets\" to see our role",
-
-                tsTag: "Market Opportunity", tsTitle: "From SAR 2 Billion to 100 Million Assets", tsSub: "Click any circle to explore market size at each stage.",
-                tamLabel: "Every valuable physical asset in Saudi Arabia", samLabel: "High-value consumer & enterprise assets (vehicles, phones, laptops, appliances)", somLabel: "AlDhamn's realistic commercial target for the first 5 years",
-                tsmAssetsLabel: "Target Assets", tsmArpaLabel: "Average Annual Revenue per Asset", tsmRevLabel: "Estimated Annual Revenue",
 
                 qcTag: "At a Glance",
                 qc1Old: "1,000 paper invoices = permanent loss", qc1New: "One digital record, never lost",
@@ -1188,8 +1197,7 @@
             renderStats();
             renderPrices();
             if (window.lucide) lucide.createIcons();
-            const activeTsm = document.querySelector('.tsm-circle.tsm-active');
-            selectTsm(activeTsm ? activeTsm.id.replace('circle','') : 'TAM');
+            renderJourney();
         }
 
         document.getElementById('langToggle').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; renderContent(); });
@@ -1246,23 +1254,6 @@
             reveal.style.maxHeight = '400px';
         }
 
-        const tsmData = {
-            TAM: { name: 'Total Addressable Market', descKey: 'tamLabel', assets: '100M', arpa: '20 SAR', rev: '2.0B SAR' },
-            SAM: { name: 'Serviceable Addressable Market', descKey: 'samLabel', assets: '25M', arpa: '20 SAR', rev: '500M SAR' },
-            SOM: { name: 'Serviceable Obtainable Market (5Y)', descKey: 'somLabel', assets: '5M', arpa: '20 SAR', rev: '100M SAR ARR' }
-        };
-        function selectTsm(key) {
-            ['TAM','SAM','SOM'].forEach(k => document.getElementById('circle'+k).classList.remove('tsm-active'));
-            document.getElementById('circle'+key).classList.add('tsm-active');
-            const d = tsmData[key];
-            const dText = state.data[state.lang][d.descKey] || d.descKey;
-            document.getElementById('tsmName').innerText = d.name;
-            document.getElementById('tsmDesc').innerText = dText;
-            document.getElementById('tsmAssets').innerText = d.assets;
-            document.getElementById('tsmArpa').innerText = d.arpa;
-            document.getElementById('tsmRev').innerText = d.rev;
-        }
-
         function toggleJourneyUI(el) {
             state.isNewJourney = !state.isNewJourney;
             if(state.isNewJourney) el.classList.add('active'); else el.classList.remove('active');
@@ -1307,6 +1298,617 @@
                 const t = +c.getAttribute('data-target'); let curr = 0;
                 const timer = setInterval(() => { curr += Math.ceil(t / 30); if(curr >= t) { c.innerText = t; clearInterval(timer); } else c.innerText = curr; }, 40);
             });
+        }
+
+
+        // ============================================================
+        //  MARKET JOURNEY ENGINE  (SAMA POS -> Break-even)
+        // ============================================================
+        const JR_DEFAULTS = {
+            posTx: 363804079,            // Sector G POS transactions (2026 partial-year window)
+            posValue: 58336406010.61,    // Sector G POS value SAR (same window)
+            windowMonths: 5,
+            growth: 8,                   // annual market growth % (value CAGR 2016-2025 = 7.8%)
+            // Official SAMA history — Sector G only (wholesale/retail trade & vehicle repair)
+            history: [
+                [2016, 110875000,  55793807500],
+                [2017, 129506446,  56054816115],
+                [2018, 149615191,  57587993321],
+                [2019, 184727115,  65209714470],
+                [2020, 214179164,  67970186412],
+                [2021, 313025970,  83023527238],
+                [2022, 368011846,  84489867261],
+                [2023, 434722437,  82798960800],
+                [2024, 570314907,  98964793868],
+                [2025, 668407667, 109300899686]
+            ],
+            eligible: [
+                { n:'الهواتف الذكية',                    e:'Smartphones',        w:18, el:100 },
+                { n:'الحواسيب والأجهزة اللوحية',          e:'Computers & tablets',w:12, el:100 },
+                { n:'الإلكترونيات المنزلية',              e:'Home electronics',   w:16, el:85  },
+                { n:'أجهزة الألعاب والكاميرات',           e:'Consoles & cameras', w:8,  el:95  },
+                { n:'الساعات والأجهزة القابلة للارتداء',   e:'Wearables',          w:6,  el:90  },
+                { n:'الأثاث والمنتجات عالية القيمة',       e:'High-value furniture',w:12, el:55  },
+                { n:'المعدات والأدوات',                   e:'Equipment & tools',  w:10, el:75  },
+                { n:'الأجهزة الطبية المنزلية',            e:'Home medical devices',w:4,  el:60  },
+                { n:'السيارات والمركبات',                 e:'Vehicles',           w:8,  el:100 },
+                { n:'غذاء ووقود وخدمات (مستبعدة)',        e:'Food, fuel, services (excluded)', w:6, el:0 }
+            ],
+            txPerBuyer: 12,              // avg eligible purchases per buyer per year
+            adultPop: 25000000,          // Saudi adult population (sanity check)
+            reach: [0.3, 1.2, 3.0, 7.0, 15.0],
+            reg:   [20, 28, 35, 42, 50],
+            act:   [35, 45, 55, 65, 75],
+            freq:  [1.3, 1.8, 2.4, 3.1, 4.0],
+            b2c: [
+                { n:'عمولة التأمين المقسّط', e:'Instalment insurance commission', fee:12, at:15 },
+                { n:'تمديد الضمان',          e:'Warranty extension',              fee:8,  at:25 },
+                { n:'رسوم نقل الملكية',      e:'Ownership transfer fee',          fee:15, at:35 },
+                { n:'عمولة الاستبدال',       e:'Trade-in commission',             fee:10, at:25 }
+            ],
+            b2b: [
+                { n:'إعلانات داخل المنصة',        e:'In-app advertising',      p:120000,  c:[5,15,35,70,120] },
+                { n:'بيع البيانات للمصنّعين',      e:'Data licensing',          p:350000,  c:[2,6,15,30,50] },
+                { n:'سلاسل الإمداد وتجار التجزئة', e:'Supply chain & retail',   p:180000,  c:[4,12,30,60,100] },
+                { n:'الجهات الحكومية',            e:'Government entities',     p:1500000, c:[1,2,4,7,10] },
+                { n:'تكامل المتاجر (API)',        e:'Merchant API integration',p:75000,   c:[20,75,200,450,800] }
+            ],
+            costB2C: 8, costB2B: 12,
+            opex:   [11300000, 14450000, 18400000, 22700000, 27900000],
+            capex:  [29500000, 0, 0, 0, 0],
+            funding: 100000000
+        };
+
+        const JR_SCEN = {
+            worst:{ n:'متحفّظ', e:'Conservative', reach:[0.1,0.3,0.7,1.5,3.0], reg:[15,18,22,26,30], act:[25,30,35,40,45], freq:[1.1,1.3,1.5,1.8,2.1] },
+            base: { n:'متوسط',  e:'Base',         reach:[0.3,1.2,3.0,7.0,15.0], reg:[20,28,35,42,50], act:[35,45,55,65,75], freq:[1.3,1.8,2.4,3.1,4.0] },
+            best: { n:'متفائل', e:'Optimistic',   reach:[0.6,2.0,5.0,11.0,22.0],reg:[28,36,44,52,60], act:[45,56,66,76,84], freq:[1.6,2.2,3.0,4.0,5.0] }
+        };
+
+        let JR = JSON.parse(JSON.stringify(JR_DEFAULTS));
+        let jrScen = 'base';
+        let jrOpen = {};
+        const jrY = 4; // display year index (Year 5)
+
+        const jrAr = () => state.lang === 'ar';
+        const jrTxt = (o) => jrAr() ? o.n : (o.e || o.n);
+
+        function jrNum(v, d) {
+            if (v === null || v === undefined || isNaN(v)) return '—';
+            const a = Math.abs(v);
+            if (a >= 1e9) return (v/1e9).toFixed(d ?? 2) + 'B';
+            if (a >= 1e6) return (v/1e6).toFixed(d ?? 1) + 'M';
+            if (a >= 1e3) return (v/1e3).toFixed(d ?? 1) + 'K';
+            return v.toFixed(a < 10 && a % 1 !== 0 ? 1 : 0);
+        }
+        const jrFull = v => new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(v||0));
+        const jrSar  = v => jrNum(v) + (jrAr() ? ' ر.س' : ' SAR');
+
+        // ---- The model ----
+        function jrCompute() {
+            const m = 12 / JR.windowMonths;
+            const annualTx = JR.posTx * m;
+            const annualVal = JR.posValue * m;
+            const ratio = JR.eligible.reduce((s,x) => s + (x.w/100) * (x.el/100), 0);
+            const g = i => Math.pow(1 + JR.growth/100, i);
+
+            const r = { annualTx, annualVal, ratio,
+                eligTx:[], eligVal:[], reachTx:[], reachBuyers:[], regUsers:[], actUsers:[],
+                tx:[], txPerUser:[], b2cRev:[], b2bRev:[], rev:[], direct:[], opex:[], profit:[], cash:[],
+                popPct:[] };
+
+            let cash = JR.funding;
+            for (let i = 0; i < 5; i++) {
+                r.eligTx[i]  = annualTx  * ratio * g(i);
+                r.eligVal[i] = annualVal * ratio * g(i);
+                r.reachTx[i]     = r.eligTx[i] * (JR.reach[i]/100);
+                r.reachBuyers[i] = r.reachTx[i] / Math.max(0.1, JR.txPerBuyer);
+                r.regUsers[i]    = r.reachBuyers[i] * (JR.reg[i]/100);
+                r.actUsers[i]    = r.regUsers[i] * (JR.act[i]/100);
+                r.tx[i]          = r.actUsers[i] * JR.freq[i];
+                r.popPct[i]      = JR.adultPop > 0 ? (r.regUsers[i] / JR.adultPop * 100) : 0;
+                r.b2cRev[i]  = JR.b2c.reduce((s,x) => s + r.tx[i] * (x.at/100) * x.fee, 0);
+                r.b2bRev[i]  = JR.b2b.reduce((s,x) => s + x.p * (x.c[i]||0), 0);
+                r.rev[i]     = r.b2cRev[i] + r.b2bRev[i];
+                r.direct[i]  = r.b2cRev[i]*(JR.costB2C/100) + r.b2bRev[i]*(JR.costB2B/100);
+                r.opex[i]    = JR.opex[i];
+                r.profit[i]  = r.rev[i] - r.direct[i] - r.opex[i];
+                cash += r.profit[i] - (JR.capex[i]||0);
+                r.cash[i] = cash;
+            }
+            r.beYear = r.profit.findIndex(p => p > 0);
+            return r;
+        }
+
+        // ---- Stage definitions ----
+        function jrStages(r) {
+            const A = jrAr();
+            return [
+            { k:'market', ico:'landmark', ar:'نشاط السوق الفعلي', en:'Actual Market Activity',
+              dAr:'عمليات نقاط البيع السنوية في قطاع تجارة الجملة والتجزئة وإصلاح المركبات، حسب بيانات ساما المنشورة. هذا ليس سوقنا — هذا حجم النشاط التجاري في القطاع المستهدف.',
+              dEn:'Annual POS transactions in wholesale & retail trade and vehicle repair, per published SAMA data. This is NOT our market — it is commercial activity in the target sector.',
+              val: jrNum(r.annualTx), unit: A?'عملية سنوياً':'transactions/yr',
+              f:'SAMA Sector G × 12 ÷ window',
+              why: A?'نبدأ من رقم رسمي منشور يمكن لأي مستثمر التحقق منه بنفسه، بدل تقدير من أعلى لأسفل. واخترنا قطاعاً واحداً محدداً بدل إجمالي نقاط البيع، لأن نصف عمليات المملكة مطاعم ومقاهٍ لا علاقة لها بتسجيل الأصول.'
+                     :'We start from an official published figure any investor can verify, not a top-down estimate. And we take one specific sector rather than total POS, because half of all Saudi transactions are restaurants and cafés with nothing to register.',
+              src: A?'البنك المركزي السعودي (ساما) — إحصاءات نقاط البيع حسب القطاع الاقتصادي، عبر DataSaudi. القطاع G: تجارة الجملة والتجزئة وإصلاح المركبات والدراجات النارية.'
+                     :'Saudi Central Bank (SAMA) — POS statistics by economic sector via DataSaudi. Sector G: wholesale and retail trade, repair of motor vehicles and motorcycles.',
+              metrics:[[A?'عمليات القطاع سنوياً':'Annual sector transactions', jrFull(r.annualTx)],
+                       [A?'قيمة القطاع سنوياً':'Annual sector value', jrFull(r.annualVal)+(A?' ر.س':' SAR')],
+                       [A?'متوسط قيمة العملية':'Average ticket', jrFull(r.annualVal/r.annualTx)+(A?' ر.س':' SAR')],
+                       [A?'حصة القطاع من إجمالي نقاط البيع':'Sector share of all POS','7.1%']],
+              hist:true,
+              inputs:[{l:A?'عمليات نقاط البيع (نافذة رسمية)':'POS transactions (official window)',p:'posTx',t:'n'},
+                      {l:A?'قيمة نقاط البيع (نافذة رسمية)':'POS value (official window)',p:'posValue',t:'n'},
+                      {l:A?'عدد أشهر النافذة':'Window months',p:'windowMonths',t:'n'},
+                      {l:A?'نمو السوق السنوي %':'Annual market growth %',p:'growth',t:'n'}] },
+
+            { k:'eligible', ico:'filter', ar:'السوق المؤهل', en:'Eligible Market',
+              dAr:'فقط العمليات التي تخص منتجات يمكن تسجيلها فعلياً داخل الضامن. الغذاء والوقود والخدمات مستبعدة بالكامل.',
+              dEn:'Only transactions for products that can actually be registered inside AlDhamn. Food, fuel and services are excluded.',
+              val:jrNum(r.eligTx[jrY]), unit:A?'عملية مؤهلة (س5)':'eligible tx (Y5)',
+              f:'Market × Σ(weight × eligibility)',
+              why: A?'ليس كل ريال يُنفق في السعودية قابلاً للتسجيل. نطبّق مصفوفة المنتجات المؤهلة لنستبعد ما لا يملك رقماً تسلسلياً أو ضماناً أو قيمة إعادة بيع.'
+                     :'Not every riyal spent in Saudi is registrable. The Eligible Product Matrix removes anything without a serial number, warranty, or resale value.',
+              src: A?'التصفية الأولى تمت بالفعل باختيار القطاع (استُبعدت المطاعم والخدمات والصحة والنقل بالكامل). هذه المصفوفة تصفية ثانية داخل قطاع التجزئة نفسه؛ الأوزان ونسب الأهلية تقدير إداري لكل فئة.'
+                     :'The first filter already happened at sector level (restaurants, services, health and transport excluded entirely). This matrix is a second filter inside retail itself; weights and eligibility ratios are internal per-category estimates.',
+              metrics:[[A?'نسبة الأهلية':'Eligible share',(r.ratio*100).toFixed(1)+'%'],
+                       [A?'العمليات المؤهلة (س5)':'Eligible transactions (Y5)', jrFull(r.eligTx[jrY])],
+                       [A?'قيمة السوق المؤهل (س5)':'Eligible market value (Y5)', jrNum(r.eligVal[jrY])+(A?' ر.س':' SAR')]],
+              matrix:true },
+
+            { k:'reach', ico:'radar', ar:'السوق القابل للوصول', en:'Reachable Market',
+              dAr:'ليس كل السوق المؤهل. هذه الحصة التي نعتقد أننا نستطيع الوصول إليها فعلياً عبر التسويق والشراكات وقنوات البيع والتوسع الجغرافي.',
+              dEn:'Not the whole eligible market. This is the realistic share we believe we can reach through marketing, partnerships, channels and geographic expansion.',
+              val:jrNum(r.reachTx[jrY]), unit:A?'عملية (س5)':'transactions (Y5)',
+              f:'Eligible × Reach%',
+              why: A?'هنا يبدأ التنفيذ. الرقم يعتمد على ميزانية التسويق وعدد المتاجر الشريكة وسرعة التوسع — وهو أكثر افتراض حساس في النموذج.'
+                     :'This is where execution begins. It depends on marketing budget, partner store count and expansion speed — the single most sensitive assumption in the model.',
+              src: A?'افتراض إداري يعكس خطة الانتشار خمسية السنوات.':'Internal assumption reflecting the five-year rollout plan.',
+              years:{p:'reach', suffix:'%'},
+              metrics:[[A?'نسبة الوصول (س5)':'Reach rate (Y5)', JR.reach[jrY]+'%'],
+                       [A?'عمليات قابلة للوصول (س5)':'Reachable transactions (Y5)', jrFull(r.reachTx[jrY])],
+                       [A?'مشترون خلف هذه العمليات (س5)':'Buyers behind them (Y5)', jrFull(r.reachBuyers[jrY])],
+                       [A?'عمليات مؤهلة لكل مشترٍ':'Eligible purchases per buyer', JR.txPerBuyer]],
+              inputs:[{l:A?'متوسط العمليات المؤهلة لكل مشترٍ سنوياً':'Avg eligible purchases per buyer / year',p:'txPerBuyer'}],
+              conv:true },
+
+            { k:'reg', ico:'user-plus', ar:'المستخدمون المسجّلون', en:'Registered Users',
+              dAr:'من المشترين الذين وصلنا إليهم وأنشأوا حساباً فعلياً. الوصول وحده لا يكفي — لا بد من تحويل.',
+              dEn:'Buyers we reached who actually created an account. Reach alone is not enough — conversion is required.',
+              val:jrNum(r.regUsers[jrY]), unit:A?'مستخدم (س5)':'users (Y5)',
+              f:'Reachable buyers × Registration%',
+              why:A?'التسجيل هو أول التزام حقيقي من العميل، ويمثّل نقطة القياس الأولى لجودة القناة التسويقية.'
+                    :'Registration is the customer\\u2019s first real commitment and the first measurable signal of channel quality.',
+              src:A?'معايير تحويل قياسية لتطبيقات الاستهلاك في المنطقة.':'Standard consumer-app conversion benchmarks for the region.',
+              years:{p:'reg', suffix:'%'},
+              metrics:[[A?'نسبة التسجيل (س5)':'Registration rate (Y5)', JR.reg[jrY]+'%'],
+                       [A?'مستخدمون مسجّلون (س5)':'Registered users (Y5)', jrFull(r.regUsers[jrY])],
+                       [A?'من البالغين في السعودية':'of Saudi adults', r.popPct[jrY].toFixed(1)+'%']],
+              inputs:[{l:A?'عدد البالغين في السعودية (مرجع)':'Saudi adult population (reference)',p:'adultPop'}],
+              sanity:true },
+
+            { k:'act', ico:'zap', ar:'المستخدمون المفعّلون', en:'Activated Users',
+              dAr:'من سجّل فعلاً منتجاً واحداً على الأقل. التسجيل وحده لا يولّد أي قيمة — التفعيل هو ما يخلق الإيراد.',
+              dEn:'Those who actually registered at least one product. Registration alone generates zero value — activation is what creates revenue.',
+              val:jrNum(r.actUsers[jrY]), unit:A?'مستخدم فعّال (س5)':'activated users (Y5)',
+              f:'Registered × Activation%',
+              why:A?'حساب فارغ لا يُنتج عمولة ولا بيانات. المستخدم المفعّل فقط هو من يدخل في محرك الإيرادات.'
+                    :'An empty account produces no commission and no data. Only an activated user enters the revenue engine.',
+              src:A?'افتراض إداري مبني على معدلات التفعيل في تطبيقات إدارة الأصول.':'Internal assumption based on activation rates in asset-management apps.',
+              years:{p:'act', suffix:'%'},
+              metrics:[[A?'نسبة التفعيل (س5)':'Activation rate (Y5)', JR.act[jrY]+'%'],
+                       [A?'مستخدمون مفعّلون (س5)':'Activated users (Y5)', jrFull(r.actUsers[jrY])]] },
+
+            { k:'tx', ico:'repeat', ar:'العمليات السنوية', en:'Annual Transactions',
+              dAr:'المستخدمون المفعّلون يولّدون عمليات: ضمان، نقل ملكية، تأمين، استبدال، توثيق. هذه هي الوحدة التي نكسب منها.',
+              dEn:'Activated users generate transactions: warranty, ownership transfer, insurance, trade-in, verification. This is the unit we earn on.',
+              val:jrNum(r.tx[jrY]), unit:A?'عملية سنوياً (س5)':'transactions/yr (Y5)',
+              f:'Activated × Transactions per user',
+              why:A?'الإيراد لا يُحسب على عدد المستخدمين بل على عدد العمليات. مستخدم واحد نشط قد يولّد عدة عمليات سنوياً.'
+                    :'Revenue is not counted per user but per transaction. One active user may generate several transactions a year.',
+              src:A?'افتراض إداري يزداد مع نضج المنصة وتوسّع الخدمات.':'Internal assumption rising as the platform matures and services expand.',
+              years:{p:'freq', suffix:''},
+              metrics:[[A?'متوسط العمليات لكل مستخدم (س5)':'Avg transactions per user (Y5)', JR.freq[jrY]],
+                       [A?'عمليات سنوية (س5)':'Annual transactions (Y5)', jrFull(r.tx[jrY])],
+                       [A?'عمليات يومياً (س5)':'Daily transactions (Y5)', jrFull(r.tx[jrY]/365)]] },
+
+            { k:'rev', ico:'coins', ar:'محرك الإيرادات', en:'Revenue Engine',
+              dAr:'مصدران مستقلان: المستهلك يدفع مقابل خدمات، والشركات تدفع مقابل بيانات ووصول. الثاني لا يعتمد على إنفاق المستهلك.',
+              dEn:'Two independent engines: consumers pay for services, businesses pay for data and reach. The second does not depend on consumer spend.',
+              val:jrNum(r.rev[jrY]), unit:A?'ر.س سنوياً (س5)':'SAR/yr (Y5)',
+              f:'B2C(tx × attach% × fee) + B2B(price × contracts)',
+              why:A?'اعتماد المنصة على مصدر واحد يجعلها هشّة. الفصل بين B2C وB2B يعني أن تباطؤ أحدهما لا يوقف الآخر.'
+                    :'Relying on one stream makes a platform fragile. Splitting B2C and B2B means a slowdown in one does not stop the other.',
+              src:A?'الرسوم ونسب الالتصاق ومبالغ العقود افتراضات تسعيرية إدارية.':'Fees, attach rates and contract values are internal pricing assumptions.',
+              streams:true,
+              metrics:[[A?'إيراد B2C (س5)':'B2C revenue (Y5)', jrNum(r.b2cRev[jrY])+(A?' ر.س':' SAR')],
+                       [A?'إيراد B2B (س5)':'B2B revenue (Y5)', jrNum(r.b2bRev[jrY])+(A?' ر.س':' SAR')],
+                       [A?'إجمالي الإيراد (س5)':'Total revenue (Y5)', jrNum(r.rev[jrY])+(A?' ر.س':' SAR')]] },
+
+            { k:'profit', ico:'trending-up', ar:'الربح التشغيلي', en:'Operating Profit',
+              dAr:'الإيراد بعد خصم التكلفة المباشرة والمصاريف التشغيلية. هذا هو الرقم الذي يقرر إن كان النموذج يعمل.',
+              dEn:'Revenue after direct cost and operating expenses. This is the number that decides whether the model works.',
+              val:jrNum(r.profit[jrY]), unit:A?'ر.س سنوياً (س5)':'SAR/yr (Y5)',
+              f:'Revenue − Direct cost − OPEX',
+              why:A?'الإيراد وحده لا يعني شيئاً. الربح التشغيلي يوضّح هل تكبر المصاريف أسرع من الدخل أم لا.'
+                    :'Revenue alone means nothing. Operating profit shows whether costs grow faster than income.',
+              src:A?'تفاصيل CAPEX وOPEX في النموذج المالي التفاعلي.':'Full CAPEX and OPEX detail lives in the interactive financial model.',
+              pnl:true,
+              metrics:[[A?'الإيراد (س5)':'Revenue (Y5)', jrNum(r.rev[jrY])+(A?' ر.س':' SAR')],
+                       [A?'التكلفة المباشرة (س5)':'Direct cost (Y5)', jrNum(r.direct[jrY])+(A?' ر.س':' SAR')],
+                       [A?'المصاريف التشغيلية (س5)':'OPEX (Y5)', jrNum(r.opex[jrY])+(A?' ر.س':' SAR')],
+                       [A?'الربح التشغيلي (س5)':'Operating profit (Y5)', jrNum(r.profit[jrY])+(A?' ر.س':' SAR')]] },
+
+            { k:'be', ico:'flag', ar:'نقطة التعادل', en:'Break-even',
+              dAr:'السنة التي يتحوّل فيها الربح التشغيلي إلى موجب، وما تبقّى من التمويل حتى تلك اللحظة.',
+              dEn:'The year operating profit turns positive, and how much funding remains at that point.',
+              val: r.beYear >= 0 ? (A?('السنة '+(r.beYear+1)):('Year '+(r.beYear+1))) : (A?'خارج الخطة':'Beyond plan'),
+              unit:'', big:false,
+              f:'First year where Operating Profit > 0',
+              why:A?'المستثمر لا يسأل كم ستكسب، بل متى تتوقف عن الخسارة وكم يكلّف الوصول لتلك النقطة.'
+                    :'Investors do not ask how much you will earn — they ask when you stop losing and what it costs to get there.',
+              src:A?'محسوبة من التمويل المستهدف مطروحاً منه CAPEX والخسائر المتراكمة.':'Derived from target funding minus CAPEX and cumulative losses.',
+              cash:true,
+              metrics:[[A?'التمويل المستهدف':'Target funding', jrNum(JR.funding)+(A?' ر.س':' SAR')],
+                       [A?'الرصيد النقدي (س5)':'Cash balance (Y5)', jrNum(r.cash[jrY])+(A?' ر.س':' SAR')],
+                       [A?'أدنى رصيد نقدي':'Lowest cash point', jrNum(Math.min(...r.cash))+(A?' ر.س':' SAR')],
+                       [A?'سنة التعادل':'Break-even year', r.beYear>=0?(A?('السنة '+(r.beYear+1)):('Year '+(r.beYear+1))):'—']] }
+            ];
+        }
+
+        // ---- Renderers ----
+        function jrYearInputs(prop, suffix) {
+            const A = jrAr();
+            return `<div class="grid grid-cols-5 gap-2 mt-2">${JR[prop].map((v,i)=>
+                `<div><div class="jr-yr">${A?'س':'Y'}${i+1}</div>
+                 <input class="jr-in" type="number" step="0.1" value="${v}" data-jr-arr="${prop}" data-jr-i="${i}"></div>`).join('')}</div>
+                 <div class="text-[11px] text-gray-600 mt-2">${A?'القيم لكل سنة من الخمس سنوات':'Values for each of the five years'}${suffix?' ('+suffix+')':''}</div>`;
+        }
+
+        function jrMatrixHTML() {
+            const A = jrAr();
+            return `<div class="mt-4 space-y-2">
+                <div class="text-[11px] text-gray-500 mb-2">${A?'الوزن = حصة الفئة من الإنفاق. الأهلية = كم من الفئة قابل للتسجيل فعلاً.':'Weight = category share of spend. Eligibility = how much of it is actually registrable.'}</div>
+                ${JR.eligible.map((c,i)=>`
+                <div class="grid grid-cols-12 gap-2 items-center jr-split">
+                    <div class="col-span-12 md:col-span-6 text-[13px] ${c.el===0?'text-gray-600 line-through':'text-gray-200'}">${jrTxt({n:c.n,e:c.e})}</div>
+                    <div class="col-span-6 md:col-span-3"><div class="jr-yr">${A?'الوزن %':'Weight %'}</div>
+                        <input class="jr-in" type="number" step="0.5" value="${c.w}" data-jr-el="${i}" data-jr-f="w"></div>
+                    <div class="col-span-6 md:col-span-3"><div class="jr-yr">${A?'الأهلية %':'Eligible %'}</div>
+                        <input class="jr-in" type="number" step="5" value="${c.el}" data-jr-el="${i}" data-jr-f="el"></div>
+                </div>`).join('')}
+            </div>`;
+        }
+
+
+
+        function jrCagr(a, b, n) { return (Math.pow(b/a, 1/n) - 1) * 100; }
+
+        function jrHistoryHTML() {
+            const A = jrAr(), H = JR.history;
+            const mx = Math.max(...H.map(r=>r[1]));
+            const cTx = jrCagr(H[0][1], H[H.length-1][1], H.length-1);
+            const cVal= jrCagr(H[0][2], H[H.length-1][2], H.length-1);
+            const t0 = H[0][2]/H[0][1], t1 = H[H.length-1][2]/H[H.length-1][1];
+            return `<div class="jr-split mt-4">
+                <div class="flex justify-between items-baseline mb-3 flex-wrap gap-2">
+                    <div class="text-[12px] text-gray-400">${A?'بيانات ساما الفعلية — قطاع تجارة الجملة والتجزئة (G)':'Actual SAMA data — Wholesale & retail trade (Sector G)'}</div>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="jr-chip">${A?'نمو العمليات':'tx CAGR'} ${cTx.toFixed(1)}%</span>
+                        <span class="jr-chip">${A?'نمو القيمة':'value CAGR'} ${cVal.toFixed(1)}%</span>
+                    </div>
+                </div>
+                <div class="flex items-end gap-1.5" style="height:110px">
+                    ${H.map(([y,tx,v])=>`<div class="flex-1 flex flex-col items-center justify-end h-full group" title="${y}: ${jrFull(tx)} tx">
+                        <div class="text-[9px] text-gray-500 mb-1 font-inter opacity-0 group-hover:opacity-100 transition-opacity">${jrNum(tx)}</div>
+                        <div style="width:100%;height:${(tx/mx*100).toFixed(1)}%;background:linear-gradient(to top,#8b5cf6,#22d3ee);border-radius:4px 4px 0 0;min-height:3px"></div>
+                        <div class="text-[9px] text-gray-600 mt-1.5 font-inter">${String(y).slice(2)}</div>
+                    </div>`).join('')}
+                </div>
+                <div class="text-[11.5px] text-gray-500 mt-4 leading-relaxed">${A
+                    ?`عدد العمليات نما من ${jrNum(H[0][1])} إلى ${jrNum(H[H.length-1][1])} عملية بين ${H[0][0]} و${H[H.length-1][0]}. لاحظ أن متوسط قيمة العملية انخفض من ${t0.toFixed(0)} ر.س إلى ${t1.toFixed(0)} ر.س — لأن جزءاً كبيراً من النمو هو انتقال المشتريات النقدية الصغيرة إلى البطاقات، وهذا سيتشبّع. لذلك نستخدم نمو القيمة (${cVal.toFixed(1)}%) كمرجع محافظ بدل نمو العمليات (${cTx.toFixed(1)}%).`
+                    :`Transaction count grew from ${jrNum(H[0][1])} to ${jrNum(H[H.length-1][1])} between ${H[0][0]} and ${H[H.length-1][0]}. Note the average ticket fell from ${t0.toFixed(0)} to ${t1.toFixed(0)} SAR — much of that growth is small cash purchases moving to cards, which will saturate. We therefore use value CAGR (${cVal.toFixed(1)}%) as a conservative reference rather than transaction CAGR (${cTx.toFixed(1)}%).`}</div>
+            </div>`;
+        }
+
+        function jrSectorHTML() {
+            const A = jrAr();
+            const rows = [
+                ['I', A?'الإقامة والخدمات الغذائية':'Accommodation & food services', 50.9, false],
+                ['S', A?'أنشطة الخدمات الأخرى':'Other service activities', 29.8, false],
+                ['Q', A?'الصحة والعمل الاجتماعي':'Health & social work', 4.2, false],
+                ['H', A?'النقل والتخزين':'Transport & storage', 2.8, false],
+                ['G', A?'تجارة الجملة والتجزئة وإصلاح المركبات':'Wholesale & retail trade, vehicle repair', 7.1, true],
+                ['—', A?'قطاعات أخرى':'Other sectors', 5.2, false]
+            ];
+            return `<div class="jr-split mt-4">
+                <div class="text-[12px] text-gray-400 mb-1">${A?'لماذا قطاع واحد فقط؟':'Why only one sector?'}</div>
+                <div class="text-[11.5px] text-gray-500 mb-3 leading-relaxed">${A
+                    ?'إجمالي عمليات نقاط البيع في السعودية يتجاوز 10 مليارات عملية سنوياً — لكن نصفها مطاعم ومقاهٍ، وثلثها خدمات. هذه ليست أصولاً قابلة للتسجيل. نبدأ من قطاع تجارة الجملة والتجزئة فقط، وهو 7.1% من إجمالي العمليات.'
+                    :'Total Saudi POS exceeds 10 billion transactions a year — but half is restaurants and cafés, and a third is services. Those are not registrable assets. We start from wholesale & retail trade only: 7.1% of all POS transactions.'}</div>
+                ${rows.map(([id,n,p,on])=>`<div class="flex items-center gap-3 py-1.5">
+                    <div class="w-6 text-[10px] font-inter ${on?'text-brand-400 font-bold':'text-gray-600'}">${id}</div>
+                    <div class="flex-1 text-[12px] ${on?'text-white font-bold':'text-gray-500'}">${n}</div>
+                    <div class="w-24"><div class="jr-bar" style="margin:0"><i style="width:${p}%;${on?'':'background:rgba(255,255,255,.18)'}"></i></div></div>
+                    <div class="w-12 text-end text-[11px] font-inter ${on?'text-brand-300':'text-gray-600'}">${p}%</div>
+                    <div class="w-5 text-[11px]">${on?'✓':'<span class="text-gray-700">✕</span>'}</div>
+                </div>`).join('')}
+            </div>`;
+        }
+
+        function jrConvHTML(r) {
+            const A = jrAr();
+            return `<div class="jr-split mt-4">
+                <div class="text-[12px] text-gray-400 mb-3">${A?'كيف تتحوّل العمليات إلى أشخاص':'How transactions become people'}</div>
+                <div class="flex items-center gap-3 flex-wrap">
+                    <div class="text-center"><div class="jr-val text-xl text-white">${jrNum(r.reachTx[jrY])}</div>
+                        <div class="text-[10.5px] text-gray-500 mt-1">${A?'عملية':'transactions'}</div></div>
+                    <div class="text-gray-600 font-inter text-sm">÷ ${JR.txPerBuyer}</div>
+                    <div class="text-gray-600">=</div>
+                    <div class="text-center"><div class="jr-val text-xl text-brand-300">${jrNum(r.reachBuyers[jrY])}</div>
+                        <div class="text-[10.5px] text-gray-500 mt-1">${A?'مشترٍ':'buyers'}</div></div>
+                </div>
+                <div class="text-[11.5px] text-gray-600 mt-3 leading-relaxed">${A
+                    ?'العملية ليست شخصاً. المشتري الواحد ينفّذ عدة عمليات مؤهلة سنوياً، فنقسم على متوسطها للحصول على عدد الأشخاص الحقيقي.'
+                    :'A transaction is not a person. One buyer makes several eligible purchases a year, so we divide by the average to get the real number of people.'}</div>
+            </div>`;
+        }
+
+        function jrSanityHTML(r) {
+            const A = jrAr();
+            const p = r.popPct[jrY], over = p > 100, warn = p > 60;
+            const col = over ? '#f87171' : warn ? '#fbbf24' : '#34d399';
+            return `<div class="jr-split mt-4" style="border-color:${over?'rgba(248,113,113,.4)':'rgba(255,255,255,.06)'}">
+                <div class="flex justify-between items-baseline mb-2">
+                    <div class="text-[12px] text-gray-400">${A?'فحص واقعية: المسجّلون مقابل عدد البالغين':'Sanity check: registered vs adult population'}</div>
+                    <div class="jr-val text-lg" style="color:${col}">${p.toFixed(1)}%</div>
+                </div>
+                <div class="jr-bar"><i style="width:${Math.min(100,p).toFixed(1)}%;background:${col}"></i></div>
+                <div class="grid grid-cols-5 gap-2 mt-3">${r.popPct.map((v,i)=>`
+                    <div class="text-center"><div class="jr-yr">${A?'س':'Y'}${i+1}</div>
+                    <div class="text-[12px] font-inter" style="color:${v>100?'#f87171':v>60?'#fbbf24':'#9ca3af'}">${v.toFixed(1)}%</div></div>`).join('')}</div>
+                <div class="text-[11.5px] mt-3 leading-relaxed" style="color:${over?'#fca5a5':'#6b7280'}">${
+                    over ? (A?'⚠️ الافتراضات الحالية تنتج مستخدمين أكثر من عدد البالغين في المملكة. اخفض نسبة الوصول أو ارفع عدد العمليات لكل مشترٍ.'
+                             :'⚠️ Current assumptions produce more users than the Kingdom has adults. Lower the reach rate or raise purchases per buyer.')
+                    : warn ? (A?'النسبة مرتفعة لكنها ممكنة نظرياً. تأكد أن خطة الانتشار تسندها.'
+                             :'High but theoretically possible. Make sure the rollout plan supports it.')
+                    : (A?'النسبة ضمن نطاق قابل للدفاع عنه أمام المستثمر.':'Within a range you can defend to an investor.')}</div>
+            </div>`;
+        }
+
+        function jrStreamsHTML(r) {
+            const A = jrAr();
+            const b2c = r.b2cRev[jrY], b2b = r.b2bRev[jrY], tot = b2c + b2b || 1;
+            return `<div class="grid md:grid-cols-2 gap-4 mt-4">
+                <div class="jr-split">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <div class="font-bold text-brand-300 text-sm">B2C · ${A?'من المستهلك':'From consumers'}</div>
+                        <div class="jr-val text-lg text-white">${jrNum(b2c)}</div>
+                    </div>
+                    <div class="jr-bar"><i style="width:${(b2c/tot*100).toFixed(1)}%"></i></div>
+                    <div class="text-[11px] text-gray-500 mt-1">${(b2c/tot*100).toFixed(1)}% ${A?'من الإيراد':'of revenue'}</div>
+                    <div class="mt-3 space-y-2">
+                    ${JR.b2c.map((x,i)=>`<div class="grid grid-cols-12 gap-2 items-center">
+                        <div class="col-span-12 text-[12.5px] text-gray-300">${jrTxt(x)} <span class="jr-chip">${jrNum(r.tx[jrY]*(x.at/100)*x.fee)}</span></div>
+                        <div class="col-span-6"><div class="jr-yr">${A?'الرسم (ر.س)':'Fee (SAR)'}</div>
+                            <input class="jr-in" type="number" value="${x.fee}" data-jr-b2c="${i}" data-jr-f="fee"></div>
+                        <div class="col-span-6"><div class="jr-yr">${A?'نسبة الالتصاق %':'Attach %'}</div>
+                            <input class="jr-in" type="number" value="${x.at}" data-jr-b2c="${i}" data-jr-f="at"></div>
+                    </div>`).join('')}
+                    </div>
+                </div>
+                <div class="jr-split">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <div class="font-bold text-blue-300 text-sm">B2B · ${A?'من الشركات والجهات':'From businesses'}</div>
+                        <div class="jr-val text-lg text-white">${jrNum(b2b)}</div>
+                    </div>
+                    <div class="jr-bar"><i style="width:${(b2b/tot*100).toFixed(1)}%"></i></div>
+                    <div class="text-[11px] text-gray-500 mt-1">${(b2b/tot*100).toFixed(1)}% ${A?'من الإيراد':'of revenue'}</div>
+                    <div class="mt-3 space-y-2">
+                    ${JR.b2b.map((x,i)=>`<div class="grid grid-cols-12 gap-2 items-center">
+                        <div class="col-span-12 text-[12.5px] text-gray-300">${jrTxt(x)} <span class="jr-chip">${jrNum(x.p*x.c[jrY])}</span></div>
+                        <div class="col-span-6"><div class="jr-yr">${A?'قيمة العقد':'Contract value'}</div>
+                            <input class="jr-in" type="number" value="${x.p}" data-jr-b2b="${i}" data-jr-f="p"></div>
+                        <div class="col-span-6"><div class="jr-yr">${A?'عدد العقود (س5)':'Contracts (Y5)'}</div>
+                            <input class="jr-in" type="number" value="${x.c[jrY]}" data-jr-b2bc="${i}"></div>
+                    </div>`).join('')}
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function jrPnlHTML(r) {
+            const A = jrAr();
+            const rows = [[A?'الإيراد':'Revenue', r.rev, '#22d3ee'],
+                          [A?'التكلفة المباشرة':'Direct cost', r.direct, '#f87171'],
+                          [A?'المصاريف التشغيلية':'OPEX', r.opex, '#fbbf24'],
+                          [A?'الربح التشغيلي':'Operating profit', r.profit, '#34d399']];
+            return `<div class="mt-4 overflow-x-auto"><table class="w-full text-[12.5px]" style="border-collapse:separate;border-spacing:0 6px">
+                <thead><tr class="text-gray-500 text-[11px]"><th class="text-start pb-1">${A?'البند':'Item'}</th>
+                ${[0,1,2,3,4].map(i=>`<th class="pb-1 font-inter">${A?'س':'Y'}${i+1}</th>`).join('')}</tr></thead>
+                <tbody>${rows.map(([lbl,arr,c])=>`<tr class="jr-split"><td class="py-2 px-3 text-gray-300 rounded-s-xl">${lbl}</td>
+                ${arr.map(v=>`<td class="py-2 px-2 text-center font-inter" style="color:${v<0?'#f87171':c}">${jrNum(v)}</td>`).join('')}</tr>`).join('')}
+                </tbody></table>
+                <div class="grid grid-cols-2 gap-3 mt-4">
+                    <div><div class="jr-yr">${A?'تكلفة B2C المباشرة %':'B2C direct cost %'}</div><input class="jr-in" type="number" value="${JR.costB2C}" data-jr-p="costB2C"></div>
+                    <div><div class="jr-yr">${A?'تكلفة B2B المباشرة %':'B2B direct cost %'}</div><input class="jr-in" type="number" value="${JR.costB2B}" data-jr-p="costB2B"></div>
+                </div>
+                <div class="mt-3"><div class="jr-yr">${A?'المصاريف التشغيلية لكل سنة (ر.س)':'OPEX per year (SAR)'}</div>
+                ${jrYearInputs('opex','')}</div></div>`;
+        }
+
+        function jrCashHTML(r) {
+            const A = jrAr();
+            const mx = Math.max(JR.funding, ...r.cash.map(Math.abs)) || 1;
+            return `<div class="mt-4">
+                <div class="grid grid-cols-5 gap-2">${r.cash.map((v,i)=>`
+                    <div class="jr-metric text-center">
+                        <div class="jr-yr">${A?'س':'Y'}${i+1}</div>
+                        <div class="jr-metric-val" style="color:${v<0?'#f87171':'#fff'};font-size:14px">${jrNum(v)}</div>
+                        <div class="jr-bar mt-2"><i style="width:${Math.min(100,Math.abs(v)/mx*100).toFixed(0)}%;${v<0?'background:#f87171':''}"></i></div>
+                        <div class="text-[10px] mt-1 ${r.profit[i]>0?'text-green-400':'text-gray-600'}">${r.profit[i]>0?(A?'ربح':'profit'):(A?'خسارة':'loss')}</div>
+                    </div>`).join('')}</div>
+                <div class="mt-4"><div class="jr-yr">${A?'التمويل المستهدف (ر.س)':'Target funding (SAR)'}</div>
+                    <input class="jr-in" type="number" value="${JR.funding}" data-jr-p="funding"></div>
+            </div>`;
+        }
+
+        function renderJourney() {
+            const wrap = document.getElementById('jrStages');
+            if (!wrap) return;
+            const A = jrAr();
+            const r = jrCompute();
+            const st = jrStages(r);
+
+            // header text
+            const T = {
+                tag:[ 'منهجية الفرصة','Opportunity Methodology'],
+                title:['من نشاط السوق الفعلي إلى نقطة التعادل','From real market activity to break-even'],
+                sub:['لا نقدّر السوق بنسب افتراضية. نبدأ من بيانات نقاط البيع الرسمية (ساما)، ثم نصفّيها بمصفوفة المنتجات المؤهلة، وننزل مرحلة بمرحلة حتى الربح التشغيلي.',
+                     'We do not size the market with generic assumptions. We start from official SAMA POS data, filter it through our Eligible Product Matrix, and step down stage by stage to operating profit.'],
+                src:['المصدر الأساسي: بيانات نقاط البيع المنشورة من البنك المركزي السعودي (ساما) وDataSaudi. نسب الوصول والتسجيل والتفعيل افتراضات إدارية قابلة للتعديل أعلاه، وليست أرقاماً رسمية.',
+                     'Primary source: POS data published by the Saudi Central Bank (SAMA) and DataSaudi. Reach, registration and activation rates are internal, editable assumptions — not official figures.']
+            };
+            const set=(id,i)=>{const e=document.getElementById(id);if(e)e.textContent=T[id.replace('jr','').toLowerCase()==='tag'?'tag':id==='jrTitle'?'title':id==='jrSub'?'sub':'src'][i]};
+            set('jrTag',A?0:1); set('jrTitle',A?0:1); set('jrSub',A?0:1); set('jrSource',A?0:1);
+
+            // scenarios
+            const sc = document.getElementById('jrScenarios');
+            if (sc) sc.innerHTML = Object.keys(JR_SCEN).map(k=>
+                `<button class="jr-scn ${k===jrScen?'on':''}" data-jr-scen="${k}">${jrAr()?JR_SCEN[k].n:JR_SCEN[k].e}</button>`).join('');
+
+            // rail
+            const rail = document.getElementById('jrRail');
+            if (rail) rail.innerHTML = st.map((s,i)=>
+                `<div class="jr-rail-item" data-jr-go="${s.k}">
+                    <div class="jr-rail-dot"></div>
+                    <div><div class="jr-rail-label">${A?s.ar:s.en}</div><div class="jr-rail-val">${s.val}${s.unit?' '+s.unit.split(' ')[0]:''}</div></div>
+                </div>`).join('');
+
+            // stages
+            wrap.innerHTML = st.map((s,i)=>`
+            <div class="jr-stage" id="jrS-${s.k}">
+                <div class="jr-card ${jrOpen[s.k]?'on':''}">
+                    <div class="flex items-start gap-4">
+                        <div class="jr-idx">${i+1}</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-start justify-between gap-3 flex-wrap">
+                                <div class="min-w-0">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                        <i data-lucide="${s.ico}" class="w-[18px] h-[18px] text-brand-400"></i>${A?s.ar:s.en}</h3>
+                                    <p class="text-gray-400 text-[13.5px] mt-1.5 leading-relaxed max-w-2xl">${A?s.dAr:s.dEn}</p>
+                                </div>
+                                <div class="text-end shrink-0">
+                                    <div class="jr-val text-3xl md:text-4xl text-white text-glow">${s.val}</div>
+                                    ${s.unit?`<div class="text-[11px] text-gray-500 mt-1">${s.unit}</div>`:''}
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 mt-4 flex-wrap">
+                                <span class="jr-formula">${s.f}</span>
+                                <div class="flex gap-2 ms-auto">
+                                    <div class="jr-btn" data-jr-info="${s.k}" title="${A?'لماذا يهم؟':'Why it matters'}">?</div>
+                                    <div class="jr-btn" data-jr-exp="${s.k}" title="${A?'تفاصيل':'Details'}">${jrOpen[s.k]?'−':'+'}</div>
+                                </div>
+                            </div>
+
+                            <div class="jr-body ${jrOpen[s.k]?'open':''}">
+                                <div class="jr-note mb-4">
+                                    <div class="font-bold text-white text-[13px] mb-1">${A?'لماذا تهم هذه المرحلة؟':'Why does this stage matter?'}</div>
+                                    ${A?s.why:s.why}
+                                    <div class="text-[11.5px] text-gray-500 mt-2 pt-2 border-t border-white/10">
+                                        <b class="text-gray-400">${A?'المصدر:':'Source:'}</b> ${s.src}</div>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    ${(s.metrics||[]).map(([l,v])=>`<div class="jr-metric"><div class="jr-metric-lbl">${l}</div><div class="jr-metric-val">${v}</div></div>`).join('')}
+                                </div>
+                                ${s.inputs?`<div class="grid md:grid-cols-2 gap-3 mt-4">${s.inputs.map(f=>
+                                    `<div><div class="jr-yr">${f.l}</div><input class="jr-in" type="number" step="any" value="${JR[f.p]}" data-jr-p="${f.p}"></div>`).join('')}</div>`:''}
+                                ${s.years?jrYearInputs(s.years.p, s.years.suffix):''}
+                                ${s.hist?jrSectorHTML()+jrHistoryHTML():''}
+                                ${s.conv?jrConvHTML(r):''}
+                                ${s.sanity?jrSanityHTML(r):''}
+                                ${s.matrix?jrMatrixHTML():''}
+                                ${s.streams?jrStreamsHTML(r):''}
+                                ${s.pnl?jrPnlHTML(r):''}
+                                ${s.cash?jrCashHTML(r):''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`).join('');
+
+            if (window.lucide) lucide.createIcons();
+            jrSyncRail();
+        }
+
+        // ---- Interaction ----
+        function jrRerender(){ renderJourney(); }
+
+        document.addEventListener('click', e => {
+            const scn = e.target.closest('[data-jr-scen]');
+            if (scn) {
+                jrScen = scn.dataset.jrScen;
+                const s = JR_SCEN[jrScen];
+                JR.reach=[...s.reach]; JR.reg=[...s.reg]; JR.act=[...s.act]; JR.freq=[...s.freq];
+                return jrRerender();
+            }
+            const exp = e.target.closest('[data-jr-exp]');
+            if (exp) { const k=exp.dataset.jrExp; jrOpen[k]=!jrOpen[k]; return jrRerender(); }
+            const inf = e.target.closest('[data-jr-info]');
+            if (inf) { const k=inf.dataset.jrInfo; jrOpen[k]=true; jrRerender();
+                setTimeout(()=>document.getElementById('jrS-'+k)?.scrollIntoView({behavior:'smooth',block:'center'}),80); return; }
+            const go = e.target.closest('[data-jr-go]');
+            if (go) { document.getElementById('jrS-'+go.dataset.jrGo)?.scrollIntoView({behavior:'smooth',block:'center'}); }
+        });
+
+        document.addEventListener('input', e => {
+            const t = e.target;
+            if (!t.classList || !t.classList.contains('jr-in')) return;
+            const v = parseFloat(t.value);
+            if (isNaN(v)) return;
+            if (t.dataset.jrP)      JR[t.dataset.jrP] = v;
+            else if (t.dataset.jrArr) JR[t.dataset.jrArr][+t.dataset.jrI] = v;
+            else if (t.dataset.jrEl)  JR.eligible[+t.dataset.jrEl][t.dataset.jrF] = v;
+            else if (t.dataset.jrB2c) JR.b2c[+t.dataset.jrB2c][t.dataset.jrF] = v;
+            else if (t.dataset.jrB2b) JR.b2b[+t.dataset.jrB2b][t.dataset.jrF] = v;
+            else if (t.dataset.jrB2bc)JR.b2b[+t.dataset.jrB2bc].c[jrY] = v;
+            else return;
+            jrLiveUpdate();
+        });
+
+        // update values without losing focus on the field being typed in
+        function jrLiveUpdate() {
+            const r = jrCompute();
+            const st = jrStages(r);
+            document.querySelectorAll('#jrStages .jr-stage').forEach((el,i)=>{
+                const s = st[i]; if(!s) return;
+                const v = el.querySelector('.jr-val'); if(v) v.textContent = s.val;
+                el.querySelectorAll('.jr-metric').forEach((m,j)=>{
+                    if (s.metrics && s.metrics[j]) m.querySelector('.jr-metric-val').textContent = s.metrics[j][1];
+                });
+            });
+            document.querySelectorAll('#jrRail .jr-rail-item').forEach((el,i)=>{
+                const s = st[i]; if(!s) return;
+                el.querySelector('.jr-rail-val').textContent = s.val + (s.unit?' '+s.unit.split(' ')[0]:'');
+            });
+        }
+
+        // ---- Rail active-state on scroll ----
+        function jrSyncRail() {
+            const items = document.querySelectorAll('#jrRail .jr-rail-item');
+            const stages = document.querySelectorAll('#jrStages .jr-stage');
+            if (!items.length || !stages.length) return;
+            if (window.__jrObs) window.__jrObs.disconnect();
+            window.__jrObs = new IntersectionObserver(entries => {
+                entries.forEach(en => {
+                    if (!en.isIntersecting) return;
+                    const idx = [...stages].indexOf(en.target);
+                    items.forEach((it,i)=>it.classList.toggle('on', i===idx));
+                    stages.forEach((sg,i)=>sg.querySelector('.jr-card')?.classList.toggle('on', i===idx || jrOpen[jrStages(jrCompute())[i]?.k]));
+                });
+            }, { rootMargin:'-45% 0px -45% 0px' });
+            stages.forEach(s => window.__jrObs.observe(s));
         }
 
         // ============================================================
