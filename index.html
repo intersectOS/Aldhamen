@@ -688,8 +688,8 @@
                                 </div>
                             </div>
                             <div class="text-left rtl:text-right">
-                                <div class="text-3xl font-bold text-white" id="b2cTotalDisplay">48 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></div>
-                                <div class="text-gray-500 text-xs" data-i18n="perAssetYear">لكل أصل / سنوياً</div>
+                                <div class="text-3xl font-bold text-white" id="b2cTotalDisplay">11.55 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></div>
+                                <div class="text-gray-500 text-xs" data-i18n="perAssetYear">متوسط الدخل لكل عملية</div>
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="b2cSub">خدمات يدفع مقابلها المستخدم مباشرة، تتراكم مع كل أصل يسجّله.</p>
@@ -717,18 +717,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
-                                <i data-lucide="crown" class="w-6 h-6 text-amber-400 shrink-0 mt-1"></i>
-                                <div class="flex-1">
-                                    <div class="flex justify-between items-baseline gap-3">
-                                        <h4 class="font-bold text-white" data-i18n="rev3T">اشتراك العروض الحصرية</h4>
-                                        <span class="text-amber-400 font-bold whitespace-nowrap"><span data-price="rev3">3</span> <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
-                                    </div>
-                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev3D">اشتراك شهري يصل فيه العميل للعروض قبل إعلانها في المنصات الأخرى — أولوية وصول مدفوعة.</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
                                 <i data-lucide="repeat" class="w-6 h-6 text-green-400 shrink-0 mt-1"></i>
                                 <div class="flex-1">
                                     <div class="flex justify-between items-baseline gap-3">
@@ -992,12 +981,11 @@
                 statsSource: "المصادر: الهيئة العامة للإحصاء، البنك المركزي السعودي، هيئة التأمين، وتقارير سوق عالمية (Omdia / Euromonitor / Grand View). نسبة إضافة وثيقة الحماية معيار عالمي لقنوات البيع الإلكترونية.",
 
                 revTag: "نموذج الإيرادات", revTitle: "مصدران للدخل، لا مصدر واحد", revSub: "الضامن يكسب من المستهلك ومن الشركات في آنٍ واحد: خدمات مدفوعة للعميل، وقيمة بيانات ووصول إعلاني للمصنّعين والمتاجر والجهات الحكومية.",
-                sarUnit: "ريال", perAssetYear: "لكل أصل / سنوياً",
-                b2cTitle: "من المستهلك", b2cSub: "خدمات يدفع مقابلها المستخدم مباشرة، تتراكم مع كل أصل يسجّله.",
+                sarUnit: "ريال", perAssetYear: "متوسط الدخل لكل عملية",
+                b2cTitle: "من المستهلك", b2cSub: "المنصة مجانية بالكامل. لا اشتراك ولا رسوم شهرية — الدخل يتحقق فقط عند تنفيذ خدمة اختيارية، وكل بند مستقل عن الآخر.",
                 b2bTitle: "من الشركات والجهات", b2bSub: "كل أصل جديد يرفع قيمة المنصة للمعلنين والمصنّعين — إيراد لا يعتمد على دفع المستهلك.", b2bScale: "يتضاعف", b2bScaleSub: "مع حجم قاعدة البيانات",
-                rev1T: "عمولة التأمين المقسّط", rev1D: "نسبة من قسط وثيقة الحماية التي يشتريها العميل عبر شركاء مرخّصين ويسددها شهرياً.",
+                rev1T: "عمولة التأمين المقسّط", rev1D: "عمولة تُحتسب مرة واحدة عند شراء العميل وثيقة حماية عبر شريك مرخّص. العميل يسدد قسطه للشركة المؤمّنة، لا للضامن.",
                 rev2T: "تمديد الضمان", rev2D: "عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
-                rev3T: "اشتراك العروض الحصرية", rev3D: "اشتراك شهري يصل فيه العميل للعروض قبل إعلانها في المنصات الأخرى — أولوية وصول مدفوعة.",
                 rev4T: "رسوم نقل الملكية", rev4D: "رسم عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع فيدفع الطرفان برضا.",
                 rev5T: "عمولة الاستبدال", rev5D: "نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.",
                 rev6T: "إعلانات داخل المنصة (Pop-Up Ads)", rev6D: "الشركات والمتاجر تدفع للضامن مقابل مساحات إعلانية داخل التطبيق، موجّهة حسب نوع الجهاز وعمره وقرب انتهاء ضمانه.",
@@ -1044,12 +1032,11 @@
                 statsSource: "Sources: GASTAT, Saudi Central Bank, Insurance Authority, and global market reports (Omdia / Euromonitor / Grand View). Protection-plan attach rate is a global benchmark for online retail channels.",
 
                 revTag: "Revenue Model", revTitle: "Two revenue engines, not one", revSub: "AlDhamn earns from consumers and from businesses at the same time: paid services for the customer, plus data value and ad reach for manufacturers, retailers and government entities.",
-                sarUnit: "SAR", perAssetYear: "per asset / year",
-                b2cTitle: "From consumers", b2cSub: "Services the user pays for directly, compounding with every asset they register.",
+                sarUnit: "SAR", perAssetYear: "average revenue per transaction",
+                b2cTitle: "From consumers", b2cSub: "The platform is entirely free. No subscription, no monthly fee — revenue occurs only when an optional service is executed, and each item is independent.",
                 b2bTitle: "From businesses & entities", b2bSub: "Every new asset raises platform value for advertisers and manufacturers — revenue that does not depend on consumer spend.", b2bScale: "Compounds", b2bScaleSub: "with database scale",
-                rev1T: "Instalment insurance commission", rev1D: "A share of the protection premium the customer buys through licensed partners and pays monthly.",
+                rev1T: "Instalment insurance commission", rev1D: "A one-off commission when the customer buys a protection policy through a licensed partner. The customer pays their premium to the insurer, not to AlDhamn.",
                 rev2T: "Warranty extension", rev2D: "Commission on extending a warranty before it lapses — the exact moment we already alert the customer.",
-                rev3T: "Exclusive offers subscription", rev3D: "A monthly subscription giving the customer offers before they are announced on other platforms — paid early access.",
                 rev4T: "Ownership transfer fee", rev4D: "A fee to move a device record to its new owner — a verified record raises resale price, so both sides pay willingly.",
                 rev5T: "Trade-in commission", rev5D: "A share of the price difference when an old device is traded in through a partner store.",
                 rev6T: "In-app advertising (Pop-Up Ads)", rev6D: "Brands and retailers pay AlDhamn for ad placements inside the app, targeted by device type, age and warranty expiry.",
@@ -1085,7 +1072,8 @@
                 { target: 404, unitAr: "مليار ريال", unitEn: "Billion SAR", labelAr: "قيمة الأجهزة والمركبات المستوردة سنوياً", labelEn: "Value of devices and vehicles imported yearly" },
                 { target: 20, unitAr: "%", unitEn: "%", labelAr: "من مشتري الأجهزة يضيفون وثيقة حماية عند الشراء", labelEn: "of device buyers add a protection plan at checkout" }
             ],
-            prices: { rev1: 12, rev2: 8, rev3: 3, rev4: 15, rev5: 10 },
+            prices: { rev1: 12, rev2: 8, rev4: 15, rev5: 10 },
+            attach: { rev1: 15, rev2: 25, rev4: 35, rev5: 25 },
             logos: null // filled from defaultLogos below at runtime
         };
 
@@ -1175,12 +1163,20 @@
                 const k = el.getAttribute('data-price');
                 if (p[k] !== undefined && p[k] !== null) el.textContent = p[k];
             });
-            const total = ['rev1','rev2','rev3','rev4','rev5'].reduce((a,k)=> a + (Number(p[k])||0), 0);
+            const at = state.dynamic.attach || {};
+            // Expected revenue per transaction = Σ(fee × execution rate). NOT a sum:
+            // not every transaction triggers every service.
+            const avg = ['rev1','rev2','rev4','rev5']
+                .reduce((a,k)=> a + (Number(p[k])||0) * ((Number(at[k])||0)/100), 0);
             const disp = document.getElementById('b2cTotalDisplay');
             if (disp) {
                 const unit = state.lang==='ar' ? 'ريال' : 'SAR';
-                disp.innerHTML = `${total} <span class="text-sm text-gray-500">${unit}</span>`;
+                disp.innerHTML = `${avg.toFixed(2)} <span class="text-sm text-gray-500">${unit}</span>`;
             }
+            document.querySelectorAll('[data-attach]').forEach(el=>{
+                const k = el.getAttribute('data-attach');
+                if (at[k] !== undefined) el.textContent = at[k];
+            });
         }
 
         function renderContent() {
@@ -1915,7 +1911,7 @@
         //  SUPABASE + ADMIN SYSTEM
         // ============================================================
         const SUPABASE_URL = 'https://jxarzvqupkgmtdujchmu.supabase.co';
-        const SUPABASE_KEY = 'sb_publishable_DNVvdFQdvK3HTN98yDI_9w_WGkvFL-I';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp4YXJ6dnF1cGtnbXRkdWpjaG11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU3MTEzNzUsImV4cCI6MjEwMTI4NzM3NX0.qObew8pu0uKmI6bsGVOnYnfEtYquoKDzzdqEv3pFsA4';
         const CONTENT_ROW_ID = 'aldhamn_main';
         // SHA-256 of the admin password "Dhamen@2026"
         const ADMIN_HASH = '8620114d1f325bafd51148ee914150cea1e248411bc386971b5b9933f9789ac6';
@@ -1947,12 +1943,36 @@
         }
 
         // ---- Save content to Supabase ----
+        let lastSaveError = '';
         async function persistContent() {
-            if (!sb) { alert('لا يوجد اتصال بقاعدة البيانات (Supabase).'); return false; }
+            lastSaveError = '';
+            if (!window.supabase) { lastSaveError = 'مكتبة Supabase لم تُحمّل (تحقق من الاتصال أو مانع الإعلانات)'; return false; }
+            if (!sb) { lastSaveError = 'تعذّر إنشاء العميل — راجع الرابط والمفتاح'; return false; }
             const payload = { id: CONTENT_ROW_ID, content: { data: state.data, dynamic: state.dynamic }, updated_at: new Date().toISOString() };
-            const { error } = await sb.from('site_content').upsert(payload, { onConflict: 'id' });
-            if (error) { console.error(error); alert('فشل الحفظ: ' + error.message); return false; }
-            return true;
+            try {
+                const { error } = await sb.from('site_content').upsert(payload, { onConflict: 'id' });
+                if (error) {
+                    lastSaveError = (error.code ? '['+error.code+'] ' : '') + (error.message || 'خطأ غير معروف');
+                    console.error('Supabase save error:', error);
+                    return false;
+                }
+                return true;
+            } catch (e) {
+                lastSaveError = 'استثناء: ' + (e.message || e);
+                console.error(e);
+                return false;
+            }
+        }
+
+        // Connection test shown inside the admin header
+        async function testConnection() {
+            const st = document.getElementById('adminStatus');
+            if (!st) return;
+            st.textContent = '...جاري الفحص'; st.className = 'text-xs px-2 py-1 rounded-full bg-white/5 text-gray-400';
+            if (!sb) { st.textContent = '⚠️ لا يوجد عميل Supabase'; st.className='text-xs px-2 py-1 rounded-full bg-red-500/15 text-red-300'; return; }
+            const { error } = await sb.from('site_content').select('id').limit(1);
+            if (error) { st.textContent = '⚠️ ' + (error.message||'فشل الاتصال'); st.className='text-xs px-2 py-1 rounded-full bg-red-500/15 text-red-300'; }
+            else { st.textContent = '✅ متصل بقاعدة البيانات'; st.className='text-xs px-2 py-1 rounded-full bg-green-500/15 text-green-300'; }
         }
 
         // ---- Admin open / auth ----
@@ -1975,6 +1995,7 @@
                 document.getElementById('adminLogin').classList.add('hidden');
                 document.getElementById('adminDashboard').classList.remove('hidden');
                 setActiveTab('content');
+                testConnection();
             } else {
                 alert('كلمة المرور غير صحيحة');
             }
@@ -2008,7 +2029,7 @@
         // Keys handled by dedicated tabs are excluded here.
         const EXCLUDED_KEYS = ['member1Name','member2Name','member3Name','member4Name',
             'stat1Label','stat2Label','stat3Label','stat4Label','billionSar','millionUnit',
-            'rev1T','rev2T','rev3T','rev4T','rev5T'];
+            'rev1T','rev2T','rev4T','rev5T'];
         function buildContentTab(body){
             body.innerHTML = '<p class="text-gray-400 text-sm mb-4">عدّل النصوص العامة للموقع (عربي/إنجليزي). أقسام الفريق والأرقام والأسعار لها تبويبات خاصة.</p>';
             const wrap = document.createElement('div'); wrap.className='space-y-3';
@@ -2140,16 +2161,20 @@
 
         // ===== PRICES TAB (B2C) =====
         const PRICE_LABELS = {
-            rev1:'عمولة التأمين المقسّط', rev2:'تمديد الضمان', rev3:'اشتراك العروض الحصرية',
+            rev1:'عمولة التأمين', rev2:'تمديد الضمان',
             rev4:'رسوم نقل الملكية', rev5:'عمولة الاستبدال'
         };
         function buildPricesTab(body){
             const p = state.dynamic.prices;
             body.innerHTML = `<p class="text-gray-400 text-sm mb-2">أسعار B2C (بالريال). الإجمالي أعلى بطاقة B2C يُحسب تلقائياً من مجموع البنود.</p>
-                <p class="text-gray-600 text-xs mb-4">القيم الحالية مطابقة للدراسة المالية: التأمين المقسّط 12، تمديد الضمان 8، نقل الملكية 15، الاستبدال 10 (اشتراك العروض 3 غير وارد في الدراسة).</p>
+                <p class="text-gray-600 text-xs mb-4">المنصة مجانية — لا اشتراك ولا رسوم شهرية. الرسم يُحتسب فقط عند تنفيذ الخدمة، ونسبة التنفيذ هي كم من العمليات تُفعّل هذه الخدمة فعلياً. المعروض في الصفحة = مجموع (الرسم × نسبة التنفيذ).</p>
                 <div class="admin-card grid md:grid-cols-2 gap-4">
-                    ${Object.keys(PRICE_LABELS).map(k=>`<div><label class="admin-label">${PRICE_LABELS[k]}</label>
-                        <input type="number" class="admin-input" dir="ltr" data-pr="${k}" value="${esc(p[k])}"></div>`).join('')}
+                    ${Object.keys(PRICE_LABELS).map(k=>`<div class="grid grid-cols-2 gap-2">
+                        <div><label class="admin-label">${PRICE_LABELS[k]} — الرسم (ر.س)</label>
+                        <input type="number" class="admin-input" dir="ltr" data-pr="${k}" value="${esc(p[k])}"></div>
+                        <div><label class="admin-label">نسبة التنفيذ %</label>
+                        <input type="number" class="admin-input" dir="ltr" data-at="${k}" value="${esc((state.dynamic.attach||{})[k])}"></div>
+                    </div>`).join('')}
                 </div>
                 <div class="admin-card mt-4">
                     <label class="admin-label">أسماء البنود (عربي / إنجليزي)</label>
@@ -2163,6 +2188,10 @@
         function collectPricesTab(){
             document.querySelectorAll('[data-pr]').forEach(el=>{
                 state.dynamic.prices[el.getAttribute('data-pr')] = Number(el.value)||0;
+            });
+            if(!state.dynamic.attach) state.dynamic.attach={};
+            document.querySelectorAll('[data-at]').forEach(el=>{
+                state.dynamic.attach[el.getAttribute('data-at')] = Number(el.value)||0;
             });
             document.querySelectorAll('[data-sx]').forEach(el=>{
                 const [l,k]=el.getAttribute('data-sx').split('|');
@@ -2190,8 +2219,12 @@
             const ok = await persistContent();
             btn.disabled = false; btn.textContent='💾 حفظ ونشر';
             if(ok){ st.textContent='✅ تم الحفظ والنشر'; st.className='text-xs px-2 py-1 rounded-full bg-green-500/15 text-green-300'; }
-            else  { st.textContent='⚠️ حُفظ محلياً فقط'; st.className='text-xs px-2 py-1 rounded-full bg-amber-500/15 text-amber-300'; }
-            setTimeout(()=>{ st.textContent=''; },4000);
+            else  {
+                st.textContent='⚠️ لم يُحفظ في قاعدة البيانات';
+                st.className='text-xs px-2 py-1 rounded-full bg-amber-500/15 text-amber-300';
+                alert('لم يُحفظ في قاعدة البيانات.\n\nالسبب: ' + (lastSaveError || 'غير معروف') + '\n\nالتعديلات ما زالت ظاهرة على الصفحة لكنها ستُفقد عند إعادة التحميل.');
+            }
+            setTimeout(()=>{ st.textContent=''; },8000);
         }
 
         // ---- Financial model password gate ----
