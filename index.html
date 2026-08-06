@@ -863,10 +863,16 @@
 
         <!-- Footer -->
         <footer class="py-10 text-center text-sm text-gray-600 relative border-t border-white/5">
-            <button onclick="openFinancialGate()" class="mb-4 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-500/40 bg-brand-500/10 text-brand-300 hover:bg-brand-500/20 transition-colors font-bold text-sm">
-                <i data-lucide="lock" class="w-4 h-4"></i>
-                <span data-i18n="finBtn">النموذج المالي التفاعلي</span>
-            </button>
+            <div class="mb-4 flex flex-wrap gap-3 justify-center">
+                <button onclick="openFinancialGate()" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-500/40 bg-brand-500/10 text-brand-300 hover:bg-brand-500/20 transition-colors font-bold text-sm">
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                    <span data-i18n="finBtn">النموذج المالي التفاعلي</span>
+                </button>
+                <button onclick="openInvestorGate()" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition-colors font-bold text-sm">
+                    <i data-lucide="briefcase" class="w-4 h-4"></i>
+                    <span data-i18n="invBtn">المستثمرون المحتملون</span>
+                </button>
+            </div>
             <p class="font-inter">© <span id="currentYear"></span> AlDhamn. All rights reserved.</p>
         </footer>
 
@@ -874,8 +880,8 @@
         <div id="finGate" class="fixed inset-0 bg-dark-900/95 backdrop-blur-xl z-[100] hidden items-center justify-center p-6 font-inter" style="display:none">
             <div class="glass-panel p-10 rounded-2xl w-full max-w-md text-center">
                 <div class="w-14 h-14 rounded-2xl bg-brand-500/15 border border-brand-500/30 flex items-center justify-center mx-auto mb-4"><i data-lucide="lock" class="w-7 h-7 text-brand-400"></i></div>
-                <h2 class="text-2xl font-bold mb-2 text-white">النموذج المالي</h2>
-                <p class="text-gray-400 text-sm mb-6">هذا المحتوى محمي. أدخل كلمة المرور للدخول.</p>
+                <h2 class="text-2xl font-bold mb-2 text-white" id="finGateTitle">النموذج المالي</h2>
+                <p class="text-gray-400 text-sm mb-6" id="finGateSub">هذا المحتوى محمي. أدخل كلمة المرور للدخول.</p>
                 <input type="password" id="finPassword" placeholder="كلمة المرور" class="w-full bg-dark-800 border border-white/10 rounded-lg px-4 py-3 mb-4 text-white text-center" onkeydown="if(event.key==='Enter')checkFinPassword()">
                 <button onclick="checkFinPassword()" class="w-full bg-brand-600 hover:bg-brand-500 transition-colors text-white font-bold py-3 rounded-lg">دخول</button>
                 <button onclick="closeFinGate()" class="mt-4 text-sm text-gray-400 hover:text-white">إلغاء</button>
@@ -984,7 +990,7 @@
                 sarUnit: "ريال", perAssetYear: "متوسط الدخل لكل عملية",
                 b2cTitle: "من المستهلك", b2cSub: "المنصة مجانية بالكامل. لا اشتراك ولا رسوم شهرية — الدخل يتحقق فقط عند تنفيذ خدمة اختيارية، وكل بند مستقل عن الآخر.",
                 b2bTitle: "من الشركات والجهات", b2bSub: "كل أصل جديد يرفع قيمة المنصة للمعلنين والمصنّعين — إيراد لا يعتمد على دفع المستهلك.", b2bScale: "يتضاعف", b2bScaleSub: "مع حجم قاعدة البيانات",
-                rev1T: "عمولة التأمين المقسّط", rev1D: "عمولة تُحتسب مرة واحدة عند شراء العميل وثيقة حماية عبر شريك مرخّص. العميل يسدد قسطه للشركة المؤمّنة، لا للضامن.",
+                rev1T: "عمولة التأمين المقسّط", rev1D: "أكبر سبب لرفض وثيقة الحماية هو دفعها كاملة مقدماً. الضامن يتيح تقسيطها عبر شريك تمويل مرخّص من ساما — فيرتفع عدد من يشتريها، ويأخذ الضامن عمولته على كل وثيقة.",
                 rev2T: "تمديد الضمان", rev2D: "عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
                 rev4T: "رسوم نقل الملكية", rev4D: "رسم عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع فيدفع الطرفان برضا.",
                 rev5T: "عمولة الاستبدال", rev5D: "نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.",
@@ -1003,7 +1009,7 @@
                 regRoleT: "دور الضامن", regRoleD: "نبني طبقة سجل الملكية للأجهزة: كل جهاز يُسجّل بفاتورته وIMEI باسم مالكه، ويُنقل السجل رسمياً عند البيع — بالتكامل مع الجهات المختصة ومشغّلي الاتصالات والمتاجر.",
                 regWhyT: "لماذا يهم", regWhyD: "سوق الأجهزة المستعملة اليوم قائم على الثقة الشخصية. سجل موثّق يرفع سعر إعادة البيع، يقطع سوق المسروقات، ويعطي الجهات الأمنية والتجارية مرجعاً واحداً.",
                 regStat1: "جوال يُباع سنوياً بلا سجل ملكية", regStat2: "مشغّلين، كل واحد يحظر على شبكته فقط", regStat3: "سجل وطني موحّد لملكية الأجهزة", regStat4: "فرصة لبناء هذه الطبقة أولاً", 
-                closeTitle: "لنبنِ طبقة الثقة معاً", closeSub: "الضامن يحوّل كل فاتورة وضمان إلى سجل موثّق، ويفتح مصدرين للدخل من المستهلك والشركات. نسعد بالتواصل معكم لمناقشة الشراكة.", contactEmail: "info@aldhamn.com", contactPhone: "050 147 3111", finBtn: "النموذج المالي التفاعلي"
+                closeTitle: "لنبنِ طبقة الثقة معاً", closeSub: "الضامن يحوّل كل فاتورة وضمان إلى سجل موثّق، ويفتح مصدرين للدخل من المستهلك والشركات. نسعد بالتواصل معكم لمناقشة الشراكة.", contactEmail: "info@aldhamn.com", contactPhone: "050 147 3111", finBtn: "النموذج المالي التفاعلي", invBtn: "المستثمرون المحتملون"
             },
             en: {
                 companyName: "AlDhamn", heroTagline: "The Trust Layer for Life After Purchase", heroTitle: "Turning Products into <br/> <span class='text-gradient text-glow'>Liquid Assets</span>", heroSub: "We keep your invoices and warranties in one verified record, alert you before the warranty ends, and let you insure your devices in monthly instalments — then trade them in for instant cash at upgrade time.", heroCta1: "Contact us for partnership", heroCta2: "Discover the Problem",
@@ -1035,7 +1041,7 @@
                 sarUnit: "SAR", perAssetYear: "average revenue per transaction",
                 b2cTitle: "From consumers", b2cSub: "The platform is entirely free. No subscription, no monthly fee — revenue occurs only when an optional service is executed, and each item is independent.",
                 b2bTitle: "From businesses & entities", b2bSub: "Every new asset raises platform value for advertisers and manufacturers — revenue that does not depend on consumer spend.", b2bScale: "Compounds", b2bScaleSub: "with database scale",
-                rev1T: "Instalment insurance commission", rev1D: "A one-off commission when the customer buys a protection policy through a licensed partner. The customer pays their premium to the insurer, not to AlDhamn.",
+                rev1T: "Instalment insurance commission", rev1D: "The biggest reason customers decline a protection policy is paying for it upfront. AlDhamn enables instalments through a SAMA-licensed finance partner — more customers buy, and AlDhamn earns its commission on each policy.",
                 rev2T: "Warranty extension", rev2D: "Commission on extending a warranty before it lapses — the exact moment we already alert the customer.",
                 rev4T: "Ownership transfer fee", rev4D: "A fee to move a device record to its new owner — a verified record raises resale price, so both sides pay willingly.",
                 rev5T: "Trade-in commission", rev5D: "A share of the price difference when an old device is traded in through a partner store.",
@@ -1054,7 +1060,7 @@
                 regRoleT: "AlDhamn's role", regRoleD: "We build the ownership record layer for devices: each device registered with its invoice and IMEI under its owner, with the record formally transferred on sale — integrated with authorities, telecom operators and retailers.",
                 regWhyT: "Why it matters", regWhyD: "The used-device market runs on personal trust today. A verified record raises resale prices, cuts off the stolen-goods market, and gives commercial and security bodies a single reference.",
                 regStat1: "phones sold yearly with no ownership record", regStat2: "operators, each blocking only on its own network", regStat3: "unified national device ownership registry", regStat4: "opportunity to build this layer first", 
-                closeTitle: "Let us build the trust layer together", closeSub: "AlDhamn turns every invoice and warranty into a verified record, opening two revenue streams from consumers and businesses. We would be glad to discuss partnership.", contactEmail: "info@aldhamn.com", contactPhone: "050 147 3111", finBtn: "Interactive Financial Model"
+                closeTitle: "Let us build the trust layer together", closeSub: "AlDhamn turns every invoice and warranty into a verified record, opening two revenue streams from consumers and businesses. We would be glad to discuss partnership.", contactEmail: "info@aldhamn.com", contactPhone: "050 147 3111", finBtn: "Interactive Financial Model", invBtn: "Prospective Investors"
             }
         };
 
@@ -2229,14 +2235,27 @@
 
         // ---- Financial model password gate ----
         const FIN_MODEL_URL = 'AlDhamn_Interactive_Financial_Model_AR_v1_2.html';
+        let gateTarget = FIN_MODEL_URL;
+        function openInvestorGate(){
+            gateTarget = 'jarir.html';
+            const t=document.getElementById('finGateTitle'), s=document.getElementById('finGateSub');
+            if(t) t.textContent = 'عرض المستثمرين';
+            if(s) s.textContent = 'هذا المستند خاص. أدخل كلمة المرور للاطلاع.';
+            openFinancialGate();
+        }
         function openFinancialGate(){
+            if(gateTarget === FIN_MODEL_URL){
+                const t=document.getElementById('finGateTitle'), s=document.getElementById('finGateSub');
+                if(t) t.textContent = 'النموذج المالي';
+                if(s) s.textContent = 'هذا المحتوى محمي. أدخل كلمة المرور للدخول.';
+            }
             const g=document.getElementById('finGate'); g.style.display='flex';
             setTimeout(()=>document.getElementById('finPassword').focus(),50);
         }
-        function closeFinGate(){ document.getElementById('finGate').style.display='none'; document.getElementById('finPassword').value=''; }
+        function closeFinGate(){ document.getElementById('finGate').style.display='none'; document.getElementById('finPassword').value=''; gateTarget = FIN_MODEL_URL; }
         async function checkFinPassword(){
             const h = await sha256(document.getElementById('finPassword').value);
-            if(h===ADMIN_HASH){ window.location.href = FIN_MODEL_URL; }
+            if(h===ADMIN_HASH){ window.location.href = gateTarget; gateTarget = FIN_MODEL_URL; }
             else { alert('كلمة المرور غير صحيحة'); document.getElementById('finPassword').value=''; }
         }
 
