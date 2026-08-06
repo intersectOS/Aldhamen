@@ -688,7 +688,7 @@
                                 </div>
                             </div>
                             <div class="text-left rtl:text-right">
-                                <div class="text-3xl font-bold text-white" id="b2cTotalDisplay">11.55 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></div>
+                                <div class="text-3xl font-bold text-white" id="b2cTotalDisplay">12.15 <span class="text-sm text-gray-500" data-i18n="sarUnit">ريال</span></div>
                                 <div class="text-gray-500 text-xs" data-i18n="perAssetYear">متوسط الدخل لكل عملية</div>
                             </div>
                         </div>
@@ -714,6 +714,17 @@
                                         <span class="text-blue-400 font-bold whitespace-nowrap"><span data-price="rev2">8</span> <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
                                     </div>
                                     <p class="text-gray-400 text-sm mt-1" data-i18n="rev2D">عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="crown" class="w-6 h-6 text-amber-400 shrink-0 mt-1"></i>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-baseline gap-3">
+                                        <h4 class="font-bold text-white" data-i18n="rev3T">اشتراك العروض الحصرية</h4>
+                                        <span class="text-amber-400 font-bold whitespace-nowrap"><span data-price="rev3">3</span> <span class="text-xs text-gray-500" data-i18n="sarUnit">ريال</span></span>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1" data-i18n="rev3D">اشتراك شهري اختياري يصل فيه المشترك للعروض والتخفيضات قبل إعلانها للعامة — أولوية وصول مدفوعة على أجهزته المسجّلة.</p>
                                 </div>
                             </div>
 
@@ -988,10 +999,10 @@
 
                 revTag: "نموذج الإيرادات", revTitle: "مصدران للدخل، لا مصدر واحد", revSub: "الضامن يكسب من المستهلك ومن الشركات في آنٍ واحد: خدمات مدفوعة للعميل، وقيمة بيانات ووصول إعلاني للمصنّعين والمتاجر والجهات الحكومية.",
                 sarUnit: "ريال", perAssetYear: "متوسط الدخل لكل عملية",
-                b2cTitle: "من المستهلك", b2cSub: "المنصة مجانية بالكامل. لا اشتراك ولا رسوم شهرية — الدخل يتحقق فقط عند تنفيذ خدمة اختيارية، وكل بند مستقل عن الآخر.",
+                b2cTitle: "من المستهلك", b2cSub: "التسجيل والاستخدام الأساسي مجاني. الدخل يتحقق فقط عند اختيار العميل خدمة إضافية، وكل بند مستقل عن الآخر.",
                 b2bTitle: "من الشركات والجهات", b2bSub: "كل أصل جديد يرفع قيمة المنصة للمعلنين والمصنّعين — إيراد لا يعتمد على دفع المستهلك.", b2bScale: "يتضاعف", b2bScaleSub: "مع حجم قاعدة البيانات",
                 rev1T: "عمولة التأمين المقسّط", rev1D: "أكبر سبب لرفض وثيقة الحماية هو دفعها كاملة مقدماً. الضامن يتيح تقسيطها عبر شريك تمويل مرخّص من ساما — فيرتفع عدد من يشتريها، ويأخذ الضامن عمولته على كل وثيقة.",
-                rev2T: "تمديد الضمان", rev2D: "عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
+                rev3T: "اشتراك العروض الحصرية", rev3D: "اشتراك شهري اختياري يصل فيه المشترك للعروض والتخفيضات قبل إعلانها للعامة — أولوية وصول مدفوعة على أجهزته المسجّلة.", rev2T: "تمديد الضمان", rev2D: "عمولة عند تمديد الضمان قبل انتهائه — وهي اللحظة التي ننبّه فيها العميل أصلاً.",
                 rev4T: "رسوم نقل الملكية", rev4D: "رسم عند نقل سجل الجهاز للمشتري الجديد — السجل الموثّق يرفع سعر البيع فيدفع الطرفان برضا.",
                 rev5T: "عمولة الاستبدال", rev5D: "نسبة من فرق السعر عند استبدال الجهاز القديم بجديد عبر المتجر الشريك.",
                 rev6T: "إعلانات داخل المنصة (Pop-Up Ads)", rev6D: "الشركات والمتاجر تدفع للضامن مقابل مساحات إعلانية داخل التطبيق، موجّهة حسب نوع الجهاز وعمره وقرب انتهاء ضمانه.",
@@ -1039,10 +1050,10 @@
 
                 revTag: "Revenue Model", revTitle: "Two revenue engines, not one", revSub: "AlDhamn earns from consumers and from businesses at the same time: paid services for the customer, plus data value and ad reach for manufacturers, retailers and government entities.",
                 sarUnit: "SAR", perAssetYear: "average revenue per transaction",
-                b2cTitle: "From consumers", b2cSub: "The platform is entirely free. No subscription, no monthly fee — revenue occurs only when an optional service is executed, and each item is independent.",
+                b2cTitle: "From consumers", b2cSub: "Registration and core use are free. Revenue occurs only when a customer opts into an extra service, and each item is independent.",
                 b2bTitle: "From businesses & entities", b2bSub: "Every new asset raises platform value for advertisers and manufacturers — revenue that does not depend on consumer spend.", b2bScale: "Compounds", b2bScaleSub: "with database scale",
                 rev1T: "Instalment insurance commission", rev1D: "The biggest reason customers decline a protection policy is paying for it upfront. AlDhamn enables instalments through a SAMA-licensed finance partner — more customers buy, and AlDhamn earns its commission on each policy.",
-                rev2T: "Warranty extension", rev2D: "Commission on extending a warranty before it lapses — the exact moment we already alert the customer.",
+                rev3T: "Exclusive offers subscription", rev3D: "An optional monthly subscription giving members access to deals and discounts before they go public — paid early access on their registered devices.", rev2T: "Warranty extension", rev2D: "Commission on extending a warranty before it lapses — the exact moment we already alert the customer.",
                 rev4T: "Ownership transfer fee", rev4D: "A fee to move a device record to its new owner — a verified record raises resale price, so both sides pay willingly.",
                 rev5T: "Trade-in commission", rev5D: "A share of the price difference when an old device is traded in through a partner store.",
                 rev6T: "In-app advertising (Pop-Up Ads)", rev6D: "Brands and retailers pay AlDhamn for ad placements inside the app, targeted by device type, age and warranty expiry.",
@@ -1078,8 +1089,8 @@
                 { target: 404, unitAr: "مليار ريال", unitEn: "Billion SAR", labelAr: "قيمة الأجهزة والمركبات المستوردة سنوياً", labelEn: "Value of devices and vehicles imported yearly" },
                 { target: 20, unitAr: "%", unitEn: "%", labelAr: "من مشتري الأجهزة يضيفون وثيقة حماية عند الشراء", labelEn: "of device buyers add a protection plan at checkout" }
             ],
-            prices: { rev1: 12, rev2: 8, rev4: 15, rev5: 10 },
-            attach: { rev1: 15, rev2: 25, rev4: 35, rev5: 25 },
+            prices: { rev1: 12, rev2: 8, rev3: 3, rev4: 15, rev5: 10 },
+            attach: { rev1: 15, rev2: 25, rev3: 20, rev4: 35, rev5: 25 },
             logos: null // filled from defaultLogos below at runtime
         };
 
@@ -1169,11 +1180,15 @@
                 const k = el.getAttribute('data-price');
                 if (p[k] !== undefined && p[k] !== null) el.textContent = p[k];
             });
-            const at = state.dynamic.attach || {};
+            const at = Object.assign({}, defaultDynamic.attach, state.dynamic.attach || {});
             // Expected revenue per transaction = Σ(fee × execution rate). NOT a sum:
             // not every transaction triggers every service.
-            const avg = ['rev1','rev2','rev4','rev5']
-                .reduce((a,k)=> a + (Number(p[k])||0) * ((Number(at[k])||0)/100), 0);
+            const dp = defaultDynamic.prices, da = defaultDynamic.attach;
+            const avg = ['rev1','rev2','rev3','rev4','rev5'].reduce((a,k)=>{
+                const fee  = (p[k]  !== undefined && p[k]  !== null && p[k]  !== '') ? Number(p[k])  : Number(dp[k]);
+                const rate = (at[k] !== undefined && at[k] !== null && at[k] !== '') ? Number(at[k]) : Number(da[k]);
+                return a + (isNaN(fee)?0:fee) * ((isNaN(rate)?0:rate)/100);
+            }, 0);
             const disp = document.getElementById('b2cTotalDisplay');
             if (disp) {
                 const unit = state.lang==='ar' ? 'ريال' : 'SAR';
@@ -1938,10 +1953,20 @@
                 if (error) { console.warn('load error', error); return; }
                 if (data && data.content) {
                     const c = data.content;
-                    if (c.data)    state.data = c.data;
+                    if (c.data) {
+                        // merge saved text over defaults so newly added keys still appear
+                        ['ar','en'].forEach(l => { if (c.data[l]) state.data[l] = Object.assign({}, state.data[l], c.data[l]); });
+                    }
                     if (c.dynamic) {
-                        state.dynamic = c.dynamic;
-                        if (!state.dynamic.logos) state.dynamic.logos = JSON.parse(JSON.stringify(defaultDynamic.logos));
+                        const d = c.dynamic;
+                        // arrays: take saved if non-empty, else keep default
+                        ['team','stats','logos'].forEach(k => {
+                            if (Array.isArray(d[k]) && d[k].length) state.dynamic[k] = d[k];
+                        });
+                        // objects: merge key-by-key so missing keys fall back to defaults
+                        ['prices','attach'].forEach(k => {
+                            if (d[k] && typeof d[k] === 'object') state.dynamic[k] = Object.assign({}, state.dynamic[k], d[k]);
+                        });
                     }
                     renderContent();
                 }
@@ -2035,7 +2060,7 @@
         // Keys handled by dedicated tabs are excluded here.
         const EXCLUDED_KEYS = ['member1Name','member2Name','member3Name','member4Name',
             'stat1Label','stat2Label','stat3Label','stat4Label','billionSar','millionUnit',
-            'rev1T','rev2T','rev4T','rev5T'];
+            'rev1T','rev2T','rev3T','rev4T','rev5T'];
         function buildContentTab(body){
             body.innerHTML = '<p class="text-gray-400 text-sm mb-4">عدّل النصوص العامة للموقع (عربي/إنجليزي). أقسام الفريق والأرقام والأسعار لها تبويبات خاصة.</p>';
             const wrap = document.createElement('div'); wrap.className='space-y-3';
@@ -2167,7 +2192,7 @@
 
         // ===== PRICES TAB (B2C) =====
         const PRICE_LABELS = {
-            rev1:'عمولة التأمين', rev2:'تمديد الضمان',
+            rev1:'عمولة التأمين', rev2:'تمديد الضمان', rev3:'اشتراك العروض الحصرية',
             rev4:'رسوم نقل الملكية', rev5:'عمولة الاستبدال'
         };
         function buildPricesTab(body){
@@ -2181,6 +2206,10 @@
                         <div><label class="admin-label">نسبة التنفيذ %</label>
                         <input type="number" class="admin-input" dir="ltr" data-at="${k}" value="${esc((state.dynamic.attach||{})[k])}"></div>
                     </div>`).join('')}
+                </div>
+                <div class="admin-card mt-4 flex items-center justify-between gap-4 flex-wrap">
+                    <div class="text-xs text-gray-400">لو ظهرت نصوص أو أرقام قديمة بعد تحديث الملف، استعد القيم الافتراضية من الملف الحالي.</div>
+                    <button onclick="restoreDefaults()" class="px-4 py-2 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 text-sm font-bold hover:bg-amber-500/25 transition-colors">↺ استعادة النصوص والأسعار الافتراضية</button>
                 </div>
                 <div class="admin-card mt-4">
                     <label class="admin-label">أسماء البنود (عربي / إنجليزي)</label>
@@ -2204,6 +2233,16 @@
                 if(!state.data[l]) state.data[l]={};
                 state.data[l][k]=el.value;
             });
+        }
+
+        function restoreDefaults(){
+            if(!confirm('سيتم إرجاع كل النصوص والأسعار إلى قيم الملف الحالي. تعديلاتك المحفوظة على النصوص ستُستبدل. متابعة؟')) return;
+            state.data = JSON.parse(JSON.stringify(initialData));
+            state.dynamic.prices = JSON.parse(JSON.stringify(defaultDynamic.prices));
+            state.dynamic.attach = JSON.parse(JSON.stringify(defaultDynamic.attach));
+            renderContent();
+            buildTab(currentTab);
+            alert('تمت الاستعادة. اضغط «حفظ ونشر» لتثبيتها في قاعدة البيانات.');
         }
 
         // ---- Collect the currently open tab ----
